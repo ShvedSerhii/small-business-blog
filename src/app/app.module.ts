@@ -13,8 +13,8 @@ import { EventsTabComponent } from './events-page/events-tab/events-tab.componen
 import { GalleryPageComponent } from './gallery-page/gallery-page.component';
 import { MenuComponent } from './header/menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import {MatButtonModule} from '@angular/material/button';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -28,7 +28,8 @@ import {MatButtonModule} from '@angular/material/button';
     EventsPageComponent,
     EventsTabComponent,
     GalleryPageComponent,
-    MenuComponent
+    MenuComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

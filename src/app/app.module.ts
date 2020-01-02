@@ -15,6 +15,7 @@ import { MenuComponent } from './header/menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LineChartComponent } from './main-page/line-chart/line-chart.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     EventsTabComponent,
     GalleryPageComponent,
     MenuComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LineChartComponent
   ],
   imports: [
     BrowserModule,

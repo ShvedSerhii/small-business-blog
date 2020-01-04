@@ -13,7 +13,7 @@ import { EventsTabComponent } from './components/events-page/events-tab/events-t
 import { GalleryPageComponent } from './components/gallery-page/gallery-page.component';
 import { MenuComponent } from './components/header/menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LineChartComponent } from './components/main-page/line-chart/line-chart.component';
 import { GoogleChartsModule } from 'angular-google-charts';
@@ -23,7 +23,8 @@ import { PieChartComponent } from './components/main-page/pie-chart/pie-chart.co
 import { SankeyChartsComponent } from './components/main-page/sankey-charts/sankey-charts.component';
 import { MatCardModule } from '@angular/material/card';
 import { HistogramChartComponent } from './components/main-page/histogram-chart/histogram-chart.component';
-
+import { LightboxModule } from 'ngx-lightbox';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -53,7 +54,9 @@ import { HistogramChartComponent } from './components/main-page/histogram-chart/
     BrowserAnimationsModule,
     MatButtonModule,
     GoogleChartsModule,
-    MatCardModule
+    MatCardModule,
+    LightboxModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

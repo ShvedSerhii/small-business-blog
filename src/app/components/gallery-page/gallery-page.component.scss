@@ -1,4 +1,14 @@
+
 .wrapper{
-    display: flex;
     min-height: 75vh;
+}
+
+.row{
+    display: grid;
+    margin: auto;
+    max-width: 1200px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 5px;
+    align-items: center;
+    justify-content: center;
 }

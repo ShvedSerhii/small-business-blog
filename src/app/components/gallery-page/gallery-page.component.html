@@ -1,3 +1,14 @@
 <div class="wrapper">
-    <p>gallery-page works!</p>
+    <div style="padding-top:50px"></div>
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-sm" *ngFor="let image of album; let i=index">
+                <img [src]="image.thumb" (click)="open(i)" />
+            </div>
+
+        </div>
+
+    </div>
 </div>

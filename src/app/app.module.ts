@@ -26,8 +26,6 @@ import { HistogramChartComponent } from './components/main-page/histogram-chart/
 import { LightboxModule } from 'ngx-lightbox';
 import { FormsModule } from '@angular/forms';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

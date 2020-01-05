@@ -14,13 +14,13 @@ export class PieChartComponent implements OnInit {
      ['Chrome', 12.8],
      ['Safari', 8.5],
      ['Opera', 6.2],
-     ['Others', 0.7] 
+     ['Others', 0.7]
   ];
   columnNames = ['Browser', 'Percentage'];
-  options = {    
-     slices: {  
+  options = {
+     slices: {
         1: {offset: 0.2},
-        3: {offset: 0.3}                   
+        3: {offset: 0.3}
      },
   };
   width = 550;

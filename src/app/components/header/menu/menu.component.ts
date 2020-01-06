@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  public homeActive:string = 'active';
+  public eventsActive:string = '';
+  public galleryActive:string = '';
+  public articlesActive:string = '';
+
   constructor() { }
 
   ngOnInit() {

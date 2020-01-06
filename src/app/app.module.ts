@@ -25,6 +25,9 @@ import { MatCardModule } from '@angular/material/card';
 import { HistogramChartComponent } from './components/main-page/histogram-chart/histogram-chart.component';
 import { LightboxModule } from 'ngx-lightbox';
 import { FormsModule } from '@angular/forms';
+import { EventsListComponent } from './components/events-page/events-list/events-list.component';
+import { MatListModule } from '@angular/material/list';
+import { CdkTableModule } from '@angular/cdk/table';
 
 @NgModule({
   declarations: [
@@ -45,6 +48,7 @@ import { FormsModule } from '@angular/forms';
     PieChartComponent,
     SankeyChartsComponent,
     HistogramChartComponent,
+    EventsListComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +58,9 @@ import { FormsModule } from '@angular/forms';
     GoogleChartsModule,
     MatCardModule,
     LightboxModule,
-    FormsModule
+    FormsModule,
+    MatListModule,
+    CdkTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

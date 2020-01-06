@@ -1,0 +1,12 @@
+<mat-card class="card">
+    <mat-card-title>Select events</mat-card-title>
+    <mat-selection-list #shoes>
+        <mat-list-option *ngFor="let shoe of typesOfShoes">
+            {{shoe}}
+        </mat-list-option>
+    </mat-selection-list>
+
+    <p>
+        Options selected: {{shoes.selectedOptions.selected.length}}
+    </p>
+</mat-card>

@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -15,19 +14,14 @@ import { MenuComponent } from './components/header/menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { LineChartComponent } from './components/main-page/line-chart/line-chart.component';
 import { GoogleChartsModule } from 'angular-google-charts';
-import { BubbleChartComponent } from './components/main-page/bubble-chart/bubble-chart.component';
-import { CandlestickChartComponent } from './components/main-page/candlestick-chart/candlestick-chart.component';
-import { PieChartComponent } from './components/main-page/pie-chart/pie-chart.component';
-import { SankeyChartsComponent } from './components/main-page/sankey-charts/sankey-charts.component';
 import { MatCardModule } from '@angular/material/card';
-import { HistogramChartComponent } from './components/main-page/histogram-chart/histogram-chart.component';
 import { LightboxModule } from 'ngx-lightbox';
 import { FormsModule } from '@angular/forms';
 import { EventsListComponent } from './components/events-page/events-list/events-list.component';
 import { MatListModule } from '@angular/material/list';
 import { CdkTableModule } from '@angular/cdk/table';
+import { ChartComponent } from './components/main-page/chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -42,13 +36,8 @@ import { CdkTableModule } from '@angular/cdk/table';
     GalleryPageComponent,
     MenuComponent,
     NotFoundComponent,
-    LineChartComponent,
-    BubbleChartComponent,
-    CandlestickChartComponent,
-    PieChartComponent,
-    SankeyChartsComponent,
-    HistogramChartComponent,
     EventsListComponent,
+    ChartComponent,
   ],
   imports: [
     BrowserModule,

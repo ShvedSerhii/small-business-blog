@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChartsModel } from '../models/ChartsModel'
 
 @Component({
   selector: 'app-main-page',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
+
+  public model:ChartsModel = new ChartsModel();
 
   constructor() { }
 

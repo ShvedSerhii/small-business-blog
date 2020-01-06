@@ -1,8 +1,5 @@
 <div class="wrapper">
-  <app-line-chart></app-line-chart>
-  <app-bubble-chart></app-bubble-chart>
-  <app-histogram-chart></app-histogram-chart>
-  <app-candlestick-chart></app-candlestick-chart>
-  <app-pie-chart></app-pie-chart>
-  <app-sankey-charts></app-sankey-charts>
+  <div *ngFor="let chart of model.charts">
+    <app-chart [title]="chart.title" [type]="chart.type" [data]="chart.data" [columnNames]="chart.columnNames" [options]="chart.options"></app-chart>
+  </div>
 </div>

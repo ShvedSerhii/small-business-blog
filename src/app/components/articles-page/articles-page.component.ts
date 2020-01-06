@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ArticlesModel } from '../models/ArticlesModel';
 
 @Component({
   selector: 'app-articles-page',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./articles-page.component.scss']
 })
 export class ArticlesPageComponent implements OnInit {
+
+  public model: ArticlesModel = new ArticlesModel();
 
   constructor() { }
 

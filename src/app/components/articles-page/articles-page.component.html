@@ -1,3 +1,7 @@
 <div class="wrapper">
-    <p>articles-page works!</p>
+    <div class='list'>
+        <div *ngFor="let article of model.articles">
+          <app-article [title]="article.title" [author]="article.author" [image]='article.image' [content]='article.content'></app-article>
+        </div>
+      </div>
 </div>

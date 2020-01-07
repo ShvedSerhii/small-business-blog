@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  public homeActive = 'active';
+  public homeActive = '';
   public eventsActive = '';
   public galleryActive = '';
   public articlesActive = '';

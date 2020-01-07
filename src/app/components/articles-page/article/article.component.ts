@@ -6,16 +6,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./article.component.scss']
 })
 export class ArticleComponent implements OnInit {
-
   @Input() title: string;
   @Input() author: string;
   @Input() image: string;
   @Input() content: string;
 
-  constructor() {
-   }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

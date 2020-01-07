@@ -7,12 +7,9 @@ import { ArticlesModel } from '../models/ArticlesModel';
   styleUrls: ['./articles-page.component.scss']
 })
 export class ArticlesPageComponent implements OnInit {
-
   public model: ArticlesModel = new ArticlesModel();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

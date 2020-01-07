@@ -7,11 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ChartComponent implements OnInit {
 
-  @Input() title:string;
-  @Input() type:string;
-  @Input() data:any;
-  @Input() columnNames:any;
-  @Input() options:any;
+  @Input() title: string;
+  @Input() type: string;
+  @Input() data: any;
+  @Input() columnNames: any;
+  @Input() options: any;
 
   constructor() { }
 

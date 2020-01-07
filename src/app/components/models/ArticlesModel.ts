@@ -3,11 +3,11 @@ import { getLocaleEraNames } from '@angular/common';
 export class ArticlesModel {
   articles = [
     {
-      title: 'At justo lectus nec at sagittis massa risus tempus malesuada proin sed sapien sit',
+      title:
+        'At justo lectus nec at sagittis massa risus tempus malesuada proin sed sapien sit',
       author: 'Sam Green 21.10.2019',
       image: 'img1.jpg',
-      content:
-        `Lorem ipsum, tellus, eros molestie, ligula sit: duis sapien vivamus maecenas magna leo
+      content: `Lorem ipsum, tellus, eros molestie, ligula sit: duis sapien vivamus maecenas magna leo
         mattis tempus elementum. Auctor vivamus sem ultricies eros tempus commodo duis sed massa
         proin, ipsum ut commodo sapien sit sed sapien lorem congue massa. Eu vivamus fusce at et,
         ut quisque magna - nulla rutrum morbi nec enim eget elementum nec. Nec nulla quam porttitor

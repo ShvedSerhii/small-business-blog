@@ -1,15 +1,14 @@
+mat-nav-list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding-left: 0;
+}
+a {
+  color: white;
+  margin: 20px;
+}
 
- mat-nav-list {
-    display: flex;
-    justify-content:  center;
-    margin: 0; 
-    padding-left: 0;
-  }
-  a {
-    color: white;
-    margin: 20px;
-    }
-  
-  a.active {
+a.active {
   color: red !important;
-  }
+}

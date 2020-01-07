@@ -1,7 +1,7 @@
 export class ChartsModel {
   charts = [
     {
-      title: "Age vs Weight",
+      title: "Sales vs Advertising",
       type: "BubbleChart",
       data: [
         ["", 8, 12],
@@ -10,13 +10,13 @@ export class ChartsModel {
         ["", 3, 3.5],
         ["", 6.5, 7]
       ],
-      columnNames: ["Id", "Age", "Weight"],
+      columnNames: ["Id", "Sales", "Advertising"],
       options: {},
       width: 550,
       height: 400
     },
     {
-      title: "",
+      title: "Stock price",
       type: "CandlestickChart",
       data: [
         ["Mon", 20, 28, 38, 45],
@@ -37,7 +37,7 @@ export class ChartsModel {
       height: 400
     },
     {
-      title: "Students height, in cm",
+      title: "Rating our students",
       type: "Histogram",
       data: [
         ["1", 80],
@@ -66,7 +66,7 @@ export class ChartsModel {
         ["24", 70],
         ["25", 85]
       ],
-      columnNames: ["Student Roll No", "height"],
+      columnNames: ["Student Roll No", "rating"],
       options: {
         legend: "none"
       },
@@ -74,7 +74,7 @@ export class ChartsModel {
       height: 400
     },
     {
-      title: "Average Temperatures of Cities",
+      title: "Business activity of Cities",
       type: "LineChart",
       data: [
         ["Jan", 7.0, -0.2, -0.9, 3.9],
@@ -96,7 +96,7 @@ export class ChartsModel {
           title: "Month"
         },
         vAxis: {
-          title: "Temperature"
+          title: "Index"
         },
         curveType: "function",
         legend: { position: "bottom" }
@@ -105,14 +105,14 @@ export class ChartsModel {
       height: 400
     },
     {
-      title: "Browser market shares at a specific website, 2014",
+      title: "The most popular topics in business courses, 2019",
       type: "PieChart",
       data: [
-        ["Firefox", 45.0],
-        ["IE", 26.8],
-        ["Chrome", 12.8],
-        ["Safari", 8.5],
-        ["Opera", 6.2],
+        ["Marketing", 45.0],
+        ["Project Management", 26.8],
+        ["Sales", 12.8],
+        ["QA", 8.5],
+        ["HR", 6.2],
         ["Others", 0.7]
       ],
       columnNames: ["Browser", "Percentage"],

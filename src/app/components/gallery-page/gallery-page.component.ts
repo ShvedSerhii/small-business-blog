@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Lightbox } from 'ngx-lightbox';
-import { GalleryModel } from '../models/GalleryModel' 
+import { GalleryModel } from '../models/GalleryModel';
 
 @Component({
   selector: 'app-gallery-page',
@@ -8,8 +8,8 @@ import { GalleryModel } from '../models/GalleryModel'
   styleUrls: ['./gallery-page.component.scss']
 })
 export class GalleryPageComponent {
-  private album: any;
-  constructor(private lightbox: Lightbox) { 
+  album: any;
+  constructor(private lightbox: Lightbox) {
     this.album = GalleryModel;
   }
 

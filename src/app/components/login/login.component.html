@@ -1,0 +1,27 @@
+<div class="wrapper">
+  <!-- <mat-card> -->
+  <!-- <mat-card-header> -->
+  <div class="login-container">
+    <h1>Login</h1>
+    <form class="login-form" [formGroup]="form.formGroup">
+      <mat-form-field>
+        <label>
+          <input type="text" matInput placeholder="Email" formControlName="email">
+        </label>
+      </mat-form-field>
+      <mat-form-field>
+        <label>
+          <input type="password" matInput placeholder="Password" formControlName="password">
+        </label>
+      </mat-form-field>
+      <div> 
+        <button mat-raised-button color="primary">Login</button>
+        <!-- <button class="register" mat-raised-button color="primary" routerLink="/register">Register</button> -->
+        <a routerLink="/register" class="register">Register</a>
+      </div>
+
+    </form>
+  </div>
+  <!-- </mat-card-header> -->
+  <!-- </mat-card> -->
+</div>

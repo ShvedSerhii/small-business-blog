@@ -1,10 +1,12 @@
 <mat-nav-list>
     <a [routerLink]="'/'" class={{homeActive}}
-        (click)="homeActive='active';eventsActive='';galleryActive='';articlesActive=''">HOME</a>
+        (click)="homeActive='active';eventsActive='';galleryActive='';articlesActive='';loginActive=''">HOME</a>
     <a [routerLink]="'/events'" class={{eventsActive}}
-        (click)="eventsActive='active';homeActive='';galleryActive='';articlesActive=''">EVENTS</a>
+        (click)="eventsActive='active';homeActive='';galleryActive='';articlesActive='';loginActive=''">EVENTS</a>
     <a [routerLink]="'/gallery'" class={{galleryActive}}
-        (click)="galleryActive='active';homeActive='';eventsActive='';articlesActive=''">GALLERY</a>
+        (click)="galleryActive='active';homeActive='';eventsActive='';articlesActive='';loginActive=''">GALLERY</a>
     <a [routerLink]="'/articles'" class={{articlesActive}}
-        (click)="articlesActive='active';homeActive='';galleryActive='';eventsActive=''">ARTICLES</a>
+        (click)="articlesActive='active';homeActive='';galleryActive='';eventsActive='';loginActive=''">ARTICLES</a>
+    <a [routerLink]="'/login'" class={{loginActive}}
+        (click)="loginActive='active';homeActive='';galleryActive='';eventsActive='';articlesActive=''">LOGIN</a>
 </mat-nav-list>

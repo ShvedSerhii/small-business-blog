@@ -13,7 +13,7 @@
         </label>
       </mat-form-field>
       <div> 
-        <button mat-raised-button color="primary">Login</button>
+        <button mat-raised-button color="primary" [disabled]="form.formGroup.invalid">Login</button>
         <a routerLink="/register" class="register">Register</a>
       </div>
     </form>

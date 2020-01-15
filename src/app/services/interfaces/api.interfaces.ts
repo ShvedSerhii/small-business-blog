@@ -1,5 +1,8 @@
-  
-import { HttpParams, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import {
+  HttpParams,
+  HttpErrorResponse,
+  HttpHeaders
+} from '@angular/common/http';
 
 export interface Handlers<TResponseBody> {
   success(data: TResponseBody);
@@ -25,6 +28,7 @@ export interface PostOptions<TRequestBody, TResponseBody> {
   parameters?: HttpParams;
   body: TRequestBody;
   handlers?: Handlers<TResponseBody>;
+  httpOptions?: { headers: HttpHeaders };
 }
 
 export interface DeleteOptions<TResponseBody> {

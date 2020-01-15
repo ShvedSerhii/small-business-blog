@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
 import { RegisterModel } from './register.model';
 import RegisterForm from './register.form';
 

@@ -21,7 +21,7 @@ export default class LoginForm {
   public createForm() {
     this.formGroup = this.formBuilder.group({
       email: new FormControl(this.model.email, { validators: [Validators.required, Validators.email], updateOn: 'change'}),
-      password: new FormControl(this.model.password, { validators: [Validators.required, Validators.pattern(/aa/)], updateOn: 'change'})
+      password: new FormControl(this.model.password, { validators: [Validators.required], updateOn: 'change'})
     });
 
     // form update

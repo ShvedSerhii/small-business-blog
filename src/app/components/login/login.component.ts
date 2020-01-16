@@ -13,10 +13,14 @@ export class LoginComponent {
   private model: LoginModel;
   public form: LoginForm;
   data: any;
+  public email: any;
+  public password: any;
   constructor(private loginService: LoginService) {
     this.model = new LoginModel();
     this.form = new LoginForm(this.model);
     this.success = {};
+    this.email = this.form.formGroup.get('email');
+    this.password = this.form.formGroup.get('password');
   }
 
   onSubmit(form) {

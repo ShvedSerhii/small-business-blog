@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'events', component: EventsPageComponent},
   { path: 'gallery', component: GalleryPageComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'register', component: RegisterComponent},
+  { path: 'registration', component: RegisterComponent},
   { path: '**', component: NotFoundComponent }
 ];
 

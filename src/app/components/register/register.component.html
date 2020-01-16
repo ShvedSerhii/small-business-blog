@@ -1,7 +1,7 @@
 <div class="wrapper">
     <div class="login-container">
-      <h1>Register</h1>
-      <form class="login-form" [formGroup]="form.formGroup">
+      <h1>Registration</h1>
+      <form class="login-form" [formGroup]="form.formGroup" (ngSubmit)="onSubmit(form.formGroup)">
         <mat-form-field>
           <label>
             <input type="text" matInput placeholder="Email" formControlName="email">
@@ -28,7 +28,7 @@
             </label>
           </mat-form-field>
         <div> 
-          <button mat-raised-button color="primary">Register</button>
+          <button mat-raised-button color="primary" [disabled]="form.formGroup.invalid">Registration</button>
           <a routerLink="/login" class="cancel">Cancel</a>
         </div>
       </form>

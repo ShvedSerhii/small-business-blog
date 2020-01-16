@@ -3,8 +3,8 @@ import {
   FormControl,
   FormGroup,
   Validators
-} from "@angular/forms";
-import { LoginModel } from "./login.model";
+} from '@angular/forms';
+import { LoginModel } from './login.model';
 /*
   ReactiveForm structure class
 */
@@ -27,7 +27,7 @@ export default class LoginForm {
           Validators.required,
           Validators.pattern(/\S+@\S+\.\S+/)
         ],
-        updateOn: "change"
+        updateOn: 'change'
       }),
       password: new FormControl(this.model.password, {
         validators: [
@@ -35,13 +35,12 @@ export default class LoginForm {
           Validators.minLength(6),
           Validators.pattern(/[0-9a-zA-Z]$/)
         ],
-        updateOn: "change"
+        updateOn: 'change'
       })
     });
 
     // form update
     this.formGroup.valueChanges.subscribe((data: any) => {
-      console.log(data);
       this.model.email = data.email;
       this.model.password = data.password;
     });

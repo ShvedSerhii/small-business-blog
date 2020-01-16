@@ -3,8 +3,8 @@ import {
   FormControl,
   FormGroup,
   Validators
-} from "@angular/forms";
-import { RegisterModel } from "./register.model";
+} from '@angular/forms';
+import { RegisterModel } from './register.model';
 /*
   ReactiveForm structure class
 */
@@ -27,7 +27,7 @@ export default class RegisterForm {
           Validators.required,
           Validators.pattern(/\S+@\S+\.\S+/)
         ],
-        updateOn: "change"
+        updateOn: 'change'
       }),
       password: new FormControl(this.model.password, {
         validators: [
@@ -35,7 +35,7 @@ export default class RegisterForm {
           Validators.minLength(6),
           Validators.pattern(/[0-9a-zA-Z]$/)
         ],
-        updateOn: "change"
+        updateOn: 'change'
       }),
       name: new FormControl(this.model.name, {
         validators: [
@@ -43,7 +43,7 @@ export default class RegisterForm {
           Validators.minLength(3),
           Validators.pattern(/[a-zA-Z]$/)
         ],
-        updateOn: "change"
+        updateOn: 'change'
       }),
       surname: new FormControl(this.model.surname, {
         validators: [
@@ -51,7 +51,7 @@ export default class RegisterForm {
           Validators.minLength(2),
           Validators.pattern(/[a-zA-Z]$/)
         ],
-        updateOn: "change"
+        updateOn: 'change'
       }),
       phone: new FormControl(this.model.phone, {
         validators: [
@@ -59,13 +59,12 @@ export default class RegisterForm {
           Validators.minLength(2),
           Validators.pattern(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)
         ],
-        updateOn: "change"
+        updateOn: 'change'
       })
     });
 
     // form update
     this.formGroup.valueChanges.subscribe((data: any) => {
-      console.log(data);
       this.model.email = data.email;
       this.model.password = data.password;
       this.model.name = data.name;

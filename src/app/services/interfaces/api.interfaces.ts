@@ -26,7 +26,7 @@ export interface PutOptions<TRequestBody, TResponseBody> {
 export interface PostOptions<TRequestBody, TResponseBody> {
   url: string;
   parameters?: HttpParams;
-  body: TRequestBody;
+  body: any;
   handlers?: Handlers<TResponseBody>;
   httpOptions?: { headers: HttpHeaders };
 }

@@ -1,9 +1,9 @@
-import { Injectable } from "@angular/core";
-import { HttpHeaders } from "@angular/common/http";
-import { ApiService } from "./api.service";
+import { Injectable } from '@angular/core';
+import { HttpHeaders } from '@angular/common/http';
+import { ApiService } from './api.service';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class RegistrationService {
   data: any;
@@ -13,17 +13,17 @@ export class RegistrationService {
   registerUser(success, body) {
     const httpOptions = {
       headers: new HttpHeaders({
-        value: "application/json"
+        value: 'application/json'
       })
     };
 
     return this.api.post({
-      url: '/api/registration', 
+      url: '/api/registration',
       handlers: {
         success,
         error: this.error.bind(this)
       },
-      body,
+      body: JSON.parse(body.toString()),
       httpOptions
     });
   }
@@ -37,6 +37,6 @@ export class RegistrationService {
   }
 
   error(error) {
-    console.log("error", error);
+    console.log('error', error);
   }
 }

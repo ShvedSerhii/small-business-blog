@@ -1,12 +1,12 @@
-import { Component } from "@angular/core";
-import { RegistrationService } from "../../services/registration.service";
-import { RegisterModel } from "./register.model";
-import RegisterForm from "./register.form";
+import { Component } from '@angular/core';
+import { RegistrationService } from '../../services/registration.service';
+import { RegisterModel } from './register.model';
+import RegisterForm from './register.form';
 
 @Component({
-  selector: "app-register",
-  templateUrl: "./register.component.html",
-  styleUrls: ["./register.component.scss"]
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
   public success: any;
@@ -20,10 +20,14 @@ export class RegisterComponent {
   }
 
   onSubmit(form) {
-    this.registrationService.registerUser(data => {
-      console.log("data", data);
-      this.data = data;
-      this.registrationService.setData(data);
-    }, `{"name":"test1", "surname":"test1", "email":"test@yopmail.com", "phone":"2313123123", "password":"admin"}`);
+    this.registrationService.registerUser(
+      data => {
+        console.log('data', data);
+        this.data = data;
+        this.registrationService.setData(data);
+      },
+      `{"name":"${form.value.name}", "surname":"${form.value.surname}", "email":"${form.value.email}",
+          "phone":"${form.value.phone}", "password":"${form.value.password}"}`
+    );
   }
 }

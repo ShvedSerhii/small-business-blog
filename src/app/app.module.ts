@@ -29,7 +29,7 @@ import { EventsListComponent } from './components/events-page/events-list/events
 import { ChartComponent } from './components/main-page/chart/chart.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { AuthInterceptorService } from './services/auth-interceptor.service';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -67,7 +67,7 @@ import { AuthInterceptorService } from './services/auth-interceptor.service';
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
-    useClass: AuthInterceptorService,
+    useClass: AuthInterceptor,
     multi: true,
   }, CookieService],
   bootstrap: [AppComponent]

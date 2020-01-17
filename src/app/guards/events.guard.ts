@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import {CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot} from '@angular/router';
 import {Observable} from 'rxjs';
-import { CookiesService } from './cookies.service';
+import { CookiesService } from '../services/cookies.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EventsGuardService implements CanActivate {
+export class EventsGuard implements CanActivate {
 
   constructor(private cookie: CookiesService) {}
 

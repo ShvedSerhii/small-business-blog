@@ -7,12 +7,12 @@ import { EventsPageComponent } from './components/events-page/events-page.compon
 import { GalleryPageComponent } from './components/gallery-page/gallery-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { EventsGuardService } from './services/events-guard.service';
+import { EventsGuard } from './guards/events.guard';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent},
   { path: 'articles', component: ArticlesPageComponent},
-  { path: 'events', component: EventsPageComponent, canActivate: [EventsGuardService]},
+  { path: 'events', component: EventsPageComponent, canActivate: [EventsGuard]},
   { path: 'gallery', component: GalleryPageComponent},
   { path: 'login', component: LoginComponent},
   { path: 'registration', component: RegisterComponent},
@@ -21,7 +21,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  providers: [EventsGuardService],
+  providers: [EventsGuard],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

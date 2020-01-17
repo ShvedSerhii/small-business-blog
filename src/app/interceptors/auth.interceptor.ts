@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 import {
   HttpInterceptor,
   HttpRequest,
@@ -6,15 +6,15 @@ import {
   HttpEvent,
   HttpResponse,
   HttpErrorResponse
-} from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
-import { CookiesService } from './cookies.service';
+} from "@angular/common/http";
+import { Observable } from "rxjs";
+import { tap } from "rxjs/operators";
+import { CookiesService } from "../services/cookies.service";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
-export class AuthInterceptorService implements HttpInterceptor {
+export class AuthInterceptor implements HttpInterceptor {
   constructor(private cookies: CookiesService) {}
 
   intercept(
@@ -22,7 +22,7 @@ export class AuthInterceptorService implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     const authReq = req.clone({
-      headers: req.headers.set('value', this.cookies.getCookie('token'))
+      headers: req.headers.set("value", this.cookies.getCookie("token"))
     });
 
     return next.handle(authReq).pipe(
@@ -30,14 +30,14 @@ export class AuthInterceptorService implements HttpInterceptor {
         event => {
           if (event instanceof HttpResponse) {
             if (event.body.token) {
-              this.cookies.setCookie('token', event.body.token);
+              this.cookies.setCookie("token", event.body.token);
             }
           }
         },
         err => {
           if (err instanceof HttpErrorResponse) {
             if (err.status === 401) {
-              console.log('Unauthorized');
+              console.log("Unauthorized");
             }
           }
         }

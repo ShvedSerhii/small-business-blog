@@ -11,15 +11,15 @@ export class CookiesService {
     private cookieService: CookieService
   ) { }
 
-  setCookie (key: string, value: string, expires: number | Date = 365, secure: boolean = true) {
-    this.cookieService.set(key, value, expires, secure)
+  setCookie(key: string, value: string, expires: number | Date = 365, secure: boolean = true) {
+    this.cookieService.set(key, value, expires, secure);
   }
 
-  getCookie (key: string) {
-    this.cookieService.get(key)
+  getCookie(key: string) {
+    this.cookieService.get(key);
   }
 
-  deleteCookie (key: string) {
-    this.cookieService.delete(key)
+  deleteCookie(key: string) {
+    this.cookieService.delete(key);
   }
 }

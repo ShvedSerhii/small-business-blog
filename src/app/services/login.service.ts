@@ -6,8 +6,6 @@ import { ApiService } from './api.service';
   providedIn: 'root'
 })
 export class LoginService {
-  data: any;
-
   constructor(private api: ApiService) {}
 
   loginUser(success, body) {
@@ -26,14 +24,6 @@ export class LoginService {
       body,
       httpOptions
     });
-  }
-
-  setData(data) {
-    this.data = data;
-  }
-
-  getData() {
-    return this.data;
   }
 
   error(error) {

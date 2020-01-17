@@ -39,7 +39,8 @@ export class RegisterComponent {
         this.password.reset();
         this.name.reset();
         this.surname.reset();
-        this.phone.reset(); 
+        this.phone.reset();
+        alert('You are registered!');
       },
       `{"name":"${form.value.name}", "surname":"${form.value.surname}", "email":"${form.value.email}",
           "phone":"${form.value.phone}", "password":"${form.value.password}"}`

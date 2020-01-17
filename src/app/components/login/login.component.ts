@@ -1,13 +1,13 @@
-import { Component } from "@angular/core";
-import { LoginModel } from "./login.model";
-import LoginForm from "./login.form";
-import { LoginService } from "../../services/login.service";
-import { CookiesService } from "../../services/cookies.service";
+import { Component } from '@angular/core';
+import { LoginModel } from './login.model';
+import LoginForm from './login.form';
+import { LoginService } from '../../services/login.service';
+import { CookiesService } from '../../services/cookies.service';
 
 @Component({
-  selector: "app-login",
-  templateUrl: "./login.component.html",
-  styleUrls: ["./login.component.scss"]
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
   public success: any;
@@ -23,21 +23,21 @@ export class LoginComponent {
     this.model = new LoginModel();
     this.form = new LoginForm(this.model);
     this.success = {};
-    this.email = this.form.formGroup.get("email");
-    this.password = this.form.formGroup.get("password");
+    this.email = this.form.formGroup.get('email');
+    this.password = this.form.formGroup.get('password');
   }
 
   isAutorization() {
-    if (!this.cookie.getCookie("token")) return true;
+    if (!this.cookie.getCookie('token')) { return true; }
     return false;
   }
   logout() {
-    this.cookie.deleteCookie("token");
+    this.cookie.deleteCookie('token');
   }
 
   onSubmit(form) {
     this.loginService.loginUser(data => {
-      console.log("data", data);
+      console.log('data', data);
       this.data = data;
       this.loginService.setData(data);
       this.email.reset();

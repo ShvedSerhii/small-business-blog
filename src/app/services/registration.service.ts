@@ -6,8 +6,6 @@ import { ApiService } from './api.service';
   providedIn: 'root'
 })
 export class RegistrationService {
-  data: any;
-
   constructor(private api: ApiService) {}
 
   registerUser(success, body) {
@@ -27,15 +25,7 @@ export class RegistrationService {
       httpOptions
     });
   }
-
-  setData(data) {
-    this.data = data;
-  }
-
-  getData() {
-    return this.data;
-  }
-
+  
   error(error) {
     console.log('error', error);
   }

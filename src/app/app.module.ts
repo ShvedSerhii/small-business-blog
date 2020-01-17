@@ -29,6 +29,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HTTP_INTERCEPTORS, HttpClientModule, HttpClient } from '@angular/common/http';
 import { AuthInterceptorService } from './services/auth-interceptor.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,7 @@ import { AuthInterceptorService } from './services/auth-interceptor.service';
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptorService,
     multi: true,
-  }],
+  }, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

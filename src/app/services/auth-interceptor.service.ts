@@ -9,26 +9,29 @@ import {
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { CookiesService } from './cookies.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthInterceptorService implements HttpInterceptor {
-  constructor() {}
+  constructor(private cookies: CookiesService) {}
 
   intercept(
     req: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     const authReq = req.clone({
-      headers: req.headers.set('Session', '123456789')
+      headers: req.headers.set('value', this.cookies.getCookie('token'))
     });
 
     return next.handle(authReq).pipe(
       tap(
         event => {
           if (event instanceof HttpResponse) {
-            console.log('Server response');
+            if (event.body.token) {
+              this.cookies.setCookie('token', event.body.token);
+            }
           }
         },
         err => {

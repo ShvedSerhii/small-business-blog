@@ -12,11 +12,9 @@ export class GalleryPageComponent {
   constructor(private lightbox: Lightbox) {
     this.album = GalleryModel;
   }
-
   open(index: number): void {
     this.lightbox.open(this.album, index);
   }
-
   close(): void {
     this.lightbox.close();
   }

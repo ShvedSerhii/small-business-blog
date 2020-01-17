@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ArticlesModel } from '../models/ArticlesModel';
 
 @Component({
@@ -6,10 +6,6 @@ import { ArticlesModel } from '../models/ArticlesModel';
   templateUrl: './articles-page.component.html',
   styleUrls: ['./articles-page.component.scss']
 })
-export class ArticlesPageComponent implements OnInit {
+export class ArticlesPageComponent {
   public model: ArticlesModel = new ArticlesModel();
-
-  constructor() {}
-
-  ngOnInit() {}
 }

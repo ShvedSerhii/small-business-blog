@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-events-tab',
   templateUrl: './events-tab.component.html',
   styleUrls: ['./events-tab.component.scss']
 })
-export class EventsTabComponent implements OnInit {
+export class EventsTabComponent {
   title = '';
   type = 'Table';
   data = [
@@ -22,7 +22,4 @@ export class EventsTabComponent implements OnInit {
   };
   width = 550;
   height = 330;
-  constructor() {}
-
-  ngOnInit() {}
 }

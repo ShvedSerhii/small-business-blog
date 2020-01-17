@@ -1,5 +1,3 @@
-import { getLocaleEraNames } from '@angular/common';
-
 export class ArticlesModel {
   articles = [
     {

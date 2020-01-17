@@ -28,6 +28,8 @@ export class LoginComponent {
       console.log('data', data);
       this.data = data;
       this.loginService.setData(data);
+      this.email.reset();
+      this.password.reset();
     }, `{"name": "${form.value.email}", "password": "${form.value.password}"}`);
   }
 }

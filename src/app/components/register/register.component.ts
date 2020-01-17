@@ -35,6 +35,11 @@ export class RegisterComponent {
         console.log('data', data);
         this.data = data;
         this.registrationService.setData(data);
+        this.email.reset();
+        this.password.reset();
+        this.name.reset();
+        this.surname.reset();
+        this.phone.reset(); 
       },
       `{"name":"${form.value.name}", "surname":"${form.value.surname}", "email":"${form.value.email}",
           "phone":"${form.value.phone}", "password":"${form.value.password}"}`

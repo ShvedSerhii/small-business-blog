@@ -22,6 +22,12 @@ import { EventsListComponent } from './components/events-page/events-list/events
 import { MatListModule } from '@angular/material/list';
 import { CdkTableModule } from '@angular/cdk/table';
 import { ChartComponent } from './components/main-page/chart/chart.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import {MatInputModule} from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { HTTP_INTERCEPTORS, HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,6 +44,8 @@ import { ChartComponent } from './components/main-page/chart/chart.component';
     NotFoundComponent,
     EventsListComponent,
     ChartComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +57,11 @@ import { ChartComponent } from './components/main-page/chart/chart.component';
     LightboxModule,
     FormsModule,
     MatListModule,
-    CdkTableModule
+    CdkTableModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

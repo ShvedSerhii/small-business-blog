@@ -10,6 +10,7 @@ export class MenuComponent implements OnInit {
   public eventsActive = '';
   public galleryActive = '';
   public articlesActive = '';
+  public loginActive = '';
 
   constructor() {}
 

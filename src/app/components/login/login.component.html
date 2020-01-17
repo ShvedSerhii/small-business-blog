@@ -1,7 +1,8 @@
 <div class="wrapper">
   <div class="login-container">
     <h1>Login</h1>
-    <form class="login-form" [formGroup]="form.formGroup" (ngSubmit)="onSubmit(form.formGroup)">
+    <form *ngIf="isAutorization()" class="login-form" [formGroup]="form.formGroup"
+      (ngSubmit)="onSubmit(form.formGroup)">
       <mat-form-field>
         <input matInput placeholder="Email" formControlName="email">
         <mat-error *ngIf="email">
@@ -21,5 +22,10 @@
         <a routerLink="/registration" class="register">Registration</a>
       </div>
     </form>
+    <div *ngIf="!isAutorization()">
+      <h3>You are authorized!</h3>
+      <button (click)="logout()" mat-raised-button color="primary">Logout</button>
+      <a routerLink="/registration" class="register">Registration</a>
+    </div>
   </div>
 </div>

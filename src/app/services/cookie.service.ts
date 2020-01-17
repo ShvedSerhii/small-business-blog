@@ -12,7 +12,7 @@ export class CookiesService {
   ) { }
 
   setCookie(key: string, value: string, expires: number | Date = 365, secure: boolean = true) {
-    this.cookieService.set(key, value, expires, secure);
+    //this.cookieService.set(key, value, expires, secure);
   }
 
   getCookie(key: string) {

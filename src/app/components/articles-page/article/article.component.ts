@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class ArticleComponent {
   @Input() title: string;
   @Input() author: string;
+  @Input() date: string;
   @Input() image: string;
   @Input() content: string;
 }

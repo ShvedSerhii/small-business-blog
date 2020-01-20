@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ArticlesModel } from '../models/ArticlesModel';
+import { ArticleModel } from './article/article.model';
+import { Articles } from '../models/Articles';
 
 @Component({
   selector: 'app-articles-page',
@@ -7,5 +8,5 @@ import { ArticlesModel } from '../models/ArticlesModel';
   styleUrls: ['./articles-page.component.scss']
 })
 export class ArticlesPageComponent {
-  public model: ArticlesModel = new ArticlesModel();
+  public articles: ArticleModel[] = Articles;
 }

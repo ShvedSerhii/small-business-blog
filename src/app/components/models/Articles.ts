@@ -1,9 +1,12 @@
-export class ArticlesModel {
-  articles = [
+import { ArticleModel } from '../articles-page/article/article.model';
+
+  export const Articles: ArticleModel[] = [
     {
+      id: 1,
       title:
         'At justo lectus nec at sagittis massa risus tempus malesuada proin sed sapien sit',
-      author: 'Sam Green 21.10.2019',
+      date: '21.10.2019',
+      author: 'Sam Green',
       image: 'img1.jpg',
       content: `Lorem ipsum, tellus, eros molestie, ligula sit: duis sapien vivamus maecenas magna leo
         mattis tempus elementum. Auctor vivamus sem ultricies eros tempus commodo duis sed massa
@@ -17,9 +20,11 @@ export class ArticlesModel {
         sem, arcu vivamus amet, at.`
     },
     {
+      id: 2,
       title:
         'Sapien quisque amet ornare, amet proin lorem orci amet malesuada auctor proin nam arcu',
-      author: 'Tom Yi 14.07.2019',
+      date: '14.07.2019',
+      author: 'Tom Yi',
       image: 'img2.jpg',
       content: `Ultricies - bibendum elementum pharetra ut quisque, morbi sem nulla massa, rutrum,
       amet enim lectus ipsum bibendum pellentesque in, maecenas et duis metus molestie odio. Auctor
@@ -32,9 +37,11 @@ export class ArticlesModel {
       eros sed metus urna risus mauris orci quisque sapien, vivamus, ligula.`
     },
     {
+      id: 3,
       title:
         'Morbi ipsum lectus elementum leo eros sem vivamus quam eget nibh at nec proin',
-      author: 'Jane Li 13.02.2019',
+      date: '13.02.2019',
+      author: 'Jane Li',
       image: 'img3.jpg',
       content: `Congue eros porta risus, tempus cursus ornare magna - lorem in gravida sapien,
       vivamus molestie curabitur eget curabitur elementum nam vulputate elementum pharetra sed.
@@ -47,5 +54,4 @@ export class ArticlesModel {
       morbi urna adipiscing morbi. Maecenas - integer, pharetra eros pellentesque, bibendum
       in massa bibendum quisque porta.`
     }
-  ];
-}
+  ]

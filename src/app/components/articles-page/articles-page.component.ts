@@ -4,11 +4,6 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { EditArticleComponent } from './edit-article/edit-article.component';
 
-export interface DialogData {
-  animal: string;
-  name: string;
-}
-
 @Component({
   selector: 'app-articles-page',
   templateUrl: './articles-page.component.html',

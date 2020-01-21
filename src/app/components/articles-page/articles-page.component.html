@@ -1,9 +1,10 @@
 <div class="wrapper">
   <mat-card class="card">
     <button mat-button (click)="openDialog()">ADD NEW ARTICLE</button>
-    <div>
+    <div class="menu">
       <button mat-button>SORT</button>
       <button mat-button>FILTER</button>
+      <app-paginator></app-paginator>
     </div>
   </mat-card>
   <div class='list'>

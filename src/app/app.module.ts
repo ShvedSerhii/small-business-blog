@@ -9,6 +9,7 @@ import { CdkTableModule } from '@angular/cdk/table';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LightboxModule } from 'ngx-lightbox';
@@ -32,6 +33,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { EditArticleComponent } from './components/articles-page/edit-article/edit-article.component';
+import { PaginatorComponent } from './components/articles-page/paginator/paginator.component';
+
 
 @NgModule({
   declarations: [
@@ -51,6 +54,7 @@ import { EditArticleComponent } from './components/articles-page/edit-article/ed
     LoginComponent,
     RegisterComponent,
     EditArticleComponent,
+    PaginatorComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +71,8 @@ import { EditArticleComponent } from './components/articles-page/edit-article/ed
     ReactiveFormsModule,
     MatFormFieldModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    MatPaginatorModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

@@ -9,6 +9,7 @@ import { CdkTableModule } from '@angular/cdk/table';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LightboxModule } from 'ngx-lightbox';
 import { CookieService } from 'ngx-cookie-service';
@@ -30,6 +31,7 @@ import { ChartComponent } from './components/main-page/chart/chart.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { EditArticleComponent } from './components/articles-page/edit-article/edit-article.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     ChartComponent,
     LoginComponent,
     RegisterComponent,
+    EditArticleComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +67,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     ReactiveFormsModule,
     MatFormFieldModule,
     HttpClientModule,
+    MatDialogModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

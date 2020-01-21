@@ -3,6 +3,7 @@ import { Articles } from '../models/Articles';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { EditArticleComponent } from './edit-article/edit-article.component';
+import { EditData } from './edit-article/edit-data.model';
 
 @Component({
   selector: 'app-articles-page',
@@ -11,20 +12,20 @@ import { EditArticleComponent } from './edit-article/edit-article.component';
 })
 export class ArticlesPageComponent {
   public articles: ArticleModel[] = Articles;
-  animal: string;
-  name: string;
+  public data: EditData;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) {
+    this.data = new EditData();
+  }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(EditArticleComponent, {
-      width: '250px',
-      data: {name: this.name, animal: this.animal}
+      width: '600px',
+      data: this.data 
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.animal = result;
+      console.log(result);
     });
   }
 }

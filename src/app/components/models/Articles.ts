@@ -2,7 +2,7 @@ import { ArticleModel } from '../articles-page/article/article.model';
 
   export const Articles: ArticleModel[] = [
     {
-      id: 1,
+      id: 0,
       title:
         'At justo lectus nec at sagittis massa risus tempus malesuada proin sed sapien sit',
       date: '21.10.2019',
@@ -20,7 +20,7 @@ import { ArticleModel } from '../articles-page/article/article.model';
         sem, arcu vivamus amet, at.`
     },
     {
-      id: 2,
+      id: 1,
       title:
         'Sapien quisque amet ornare, amet proin lorem orci amet malesuada auctor proin nam arcu',
       date: '14.07.2019',
@@ -37,7 +37,7 @@ import { ArticleModel } from '../articles-page/article/article.model';
       eros sed metus urna risus mauris orci quisque sapien, vivamus, ligula.`
     },
     {
-      id: 3,
+      id: 2,
       title:
         'Morbi ipsum lectus elementum leo eros sem vivamus quam eget nibh at nec proin',
       date: '13.02.2019',

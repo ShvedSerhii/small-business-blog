@@ -9,7 +9,7 @@ import { CdkTableModule } from '@angular/cdk/table';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LightboxModule } from 'ngx-lightbox';
 import { CookieService } from 'ngx-cookie-service';
@@ -73,7 +73,11 @@ import { EditArticleComponent } from './components/articles-page/edit-article/ed
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,
     multi: true,
-  }, CookieService],
-  bootstrap: [AppComponent]
+  }, {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},
+  CookieService],
+  bootstrap: [AppComponent],
+  entryComponents: [
+    EditArticleComponent
+  ],
 })
 export class AppModule { }

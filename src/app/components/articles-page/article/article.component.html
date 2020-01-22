@@ -8,9 +8,9 @@
             <button mat-button>LIKE</button>
             <button mat-button>SHARE</button>
         </div>
-        <div>
+        <div *ngIf="isAuthorization()"> 
             <button mat-button (click)="openDialog()">EDIT</button>
-        <button mat-button (click)="articlesController.deleteArticle(index);">DELETE</button> 
+            <button mat-button (click)="articlesController.deleteArticle(index);">DELETE</button> 
         </div> 
     </mat-card-actions>
 </mat-card> 

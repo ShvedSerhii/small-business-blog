@@ -24,6 +24,15 @@ export class ArticlesControllerService {
     return this.model;
   }
 
+  getCurrentArticle(index: number): ArticleModel {
+    return this.model[index];
+  } 
+
+  updateCurrentArticle(article: ArticleModel, index: number): void {
+    this.model[index] = article;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(this.model));
+  }
+
   addArticle(article: ArticleModel): void {
     this.model.unshift(article); 
     localStorage.setItem(STORAGE_KEY, JSON.stringify(this.model));

@@ -9,7 +9,7 @@
             <button mat-button>SHARE</button>
         </div>
         <div>
-            <button mat-button>EDIT</button>
+            <button mat-button (click)="openDialog()">EDIT</button>
         <button mat-button (click)="articlesController.deleteArticle(index);">DELETE</button> 
         </div> 
     </mat-card-actions>

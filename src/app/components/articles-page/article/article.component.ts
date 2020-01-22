@@ -1,5 +1,9 @@
 import { Component, Input } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { EditArticleComponent } from '../edit-article/edit-article.component';
+import { EditData } from '../edit-article/edit-data.model';
 import { ArticlesControllerService } from 'src/app/services/articles-controller.service';
+
 
 @Component({
   selector: 'app-article',
@@ -14,7 +18,22 @@ export class ArticleComponent {
   @Input() content: string;
   @Input() index: number;
 
-  constructor(public articlesController: ArticlesControllerService){
-    
+  public data: EditData;
+
+  constructor(public dialog: MatDialog, public articlesController: ArticlesControllerService) {
+    this.data = new EditData();
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(EditArticleComponent, {
+      width: '600px',
+      data: this.articlesController.getCurrentArticle(this.index) 
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result.title && result.date && result.author && result.content)
+        this.articlesController.updateCurrentArticle(result, this.index); 
+    });
   }
 }
+ 

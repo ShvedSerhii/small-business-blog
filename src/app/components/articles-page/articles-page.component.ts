@@ -1,6 +1,5 @@
-import { ArticleModel } from './article/article.model';
-import { Articles } from '../models/Articles';
 import { Component } from '@angular/core';
+import { ArticleModel } from './article/article.model';
 import { MatDialog } from '@angular/material/dialog';
 import { EditArticleComponent } from './edit-article/edit-article.component';
 import { EditData } from './edit-article/edit-data.model';

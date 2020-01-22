@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ArticlesControllerService } from 'src/app/services/articles-controller.service';
 
 @Component({
   selector: 'app-article',
@@ -11,4 +12,9 @@ export class ArticleComponent {
   @Input() date: string;
   @Input() image: string;
   @Input() content: string;
+  @Input() index: number;
+
+  constructor(public articlesController: ArticlesControllerService){
+    
+  }
 }

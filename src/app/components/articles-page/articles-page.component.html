@@ -4,13 +4,13 @@
     <div class="menu">
       <button mat-button>SORT</button>
       <button mat-button>FILTER</button>
-      <app-paginator></app-paginator>
     </div>
   </mat-card>
   <div class='list'>
-    <div *ngFor="let article of articles">
-      <app-article [title]="article.title" [author]="article.author" [date]="article.date" [image]='article.image'
-        [content]='article.content'></app-article>
+    <div *ngFor="let article of articles, let i = index">
+      <app-article [title]="article.title" [author]="article.author" [date]="article.date" [image]="article.image"
+        [content]="article.content" [index]='i'></app-article>
     </div>
   </div>
+  <app-paginator></app-paginator>
 </div>

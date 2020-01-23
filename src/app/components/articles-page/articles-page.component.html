@@ -3,11 +3,13 @@
     <button mat-button (click)="openDialog()">+ ADD NEW ARTICLE</button>
     <div class="menu">
       <button mat-button>SORT</button>
-      <button mat-button>FILTER</button>
+      <mat-form-field>
+        <input matInput type="text" [(ngModel)]="searchText"  placeholder="Filter by Title of Articles" />
+      </mat-form-field>
     </div>
   </mat-card>
   <div class='list'>
-    <div *ngFor="let article of articles | paginate: { itemsPerPage: 5, currentPage: p }, let i = index">
+    <div *ngFor="let article of articles | paginate: { itemsPerPage: 5, currentPage: p } | filter : searchText, let i = index">
       <app-article [title]="article.title" [author]="article.author" [date]="article.date" [image]="article.image"
         [content]="article.content" [index]='i'></app-article>
     </div>
@@ -15,4 +17,4 @@
       <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </div>
   </div>
-</div>
+</div>  

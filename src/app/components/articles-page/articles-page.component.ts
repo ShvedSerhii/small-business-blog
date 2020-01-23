@@ -14,6 +14,7 @@ import { CookiesService } from 'src/app/services/cookies.service';
 export class ArticlesPageComponent {
   public articles: ArticleModel[];
   public data: EditData;
+  public searchText: any;
 
   constructor(
     public dialog: MatDialog,

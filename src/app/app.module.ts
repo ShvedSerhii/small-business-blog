@@ -33,6 +33,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { EditArticleComponent } from './components/articles-page/edit-article/edit-article.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { EditArticleComponent } from './components/articles-page/edit-article/ed
     LoginComponent,
     RegisterComponent,
     EditArticleComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,

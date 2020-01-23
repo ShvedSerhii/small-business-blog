@@ -5,6 +5,7 @@ import { EditArticleComponent } from "./edit-article/edit-article.component";
 import { EditData } from "./edit-article/edit-data.model";
 import { ArticlesControllerService } from "src/app/services/articles-controller.service";
 import { CookiesService } from "src/app/services/cookies.service";
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: "app-articles-page",

@@ -34,6 +34,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { EditArticleComponent } from './components/articles-page/edit-article/edit-article.component';
 import { PaginatorComponent } from './components/articles-page/paginator/paginator.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -54,7 +55,7 @@ import { PaginatorComponent } from './components/articles-page/paginator/paginat
     LoginComponent,
     RegisterComponent,
     EditArticleComponent,
-    PaginatorComponent,
+    PaginatorComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +73,8 @@ import { PaginatorComponent } from './components/articles-page/paginator/paginat
     MatFormFieldModule,
     HttpClientModule,
     MatDialogModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    NgxPaginationModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

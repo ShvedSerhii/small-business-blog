@@ -7,10 +7,12 @@
     </div>
   </mat-card>
   <div class='list'>
-    <div *ngFor="let article of articles, let i = index">
+    <div *ngFor="let article of articles | paginate: { itemsPerPage: 5, currentPage: p }, let i = index">
       <app-article [title]="article.title" [author]="article.author" [date]="article.date" [image]="article.image"
         [content]="article.content" [index]='i'></app-article>
     </div>
+    <div class="paginator">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
   </div>
-  <app-paginator></app-paginator>
 </div>

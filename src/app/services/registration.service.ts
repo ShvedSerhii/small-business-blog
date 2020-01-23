@@ -25,7 +25,7 @@ export class RegistrationService {
       httpOptions
     });
   }
-  
+
   error(error) {
     console.log('error', error);
   }

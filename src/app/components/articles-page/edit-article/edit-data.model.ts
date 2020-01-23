@@ -4,4 +4,4 @@ export class EditData {
   image: string;
   author: string;
   content: string;
-  }
+}

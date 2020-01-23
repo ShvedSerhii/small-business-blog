@@ -1,6 +1,6 @@
 import { ArticleModel } from '../articles-page/article/article.model';
 
-  export const Articles: ArticleModel[] = [
+export const Articles: ArticleModel[] = [
     {
       title:
         'At justo lectus nec at sagittis massa risus tempus malesuada proin sed sapien sit',
@@ -51,4 +51,4 @@ import { ArticleModel } from '../articles-page/article/article.model';
       morbi urna adipiscing morbi. Maecenas - integer, pharetra eros pellentesque, bibendum
       in massa bibendum quisque porta.`
     }
-  ]
+  ];

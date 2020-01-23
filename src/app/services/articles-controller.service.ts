@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ArticleModel } from '../components/articles-page/article/article.model';
-import { Articles } from './../components/models/Articles'
+import { Articles } from './../components/models/Articles';
 
 const STORAGE_KEY = 'local_articles';
 
@@ -9,7 +9,6 @@ const STORAGE_KEY = 'local_articles';
 })
 export class ArticlesControllerService {
   public model: ArticleModel[];
-
 
   constructor() {
     if (localStorage.getItem(STORAGE_KEY)) {
@@ -26,7 +25,7 @@ export class ArticlesControllerService {
 
   getCurrentArticle(index: number): ArticleModel {
     return this.model[index];
-  } 
+  }
 
   updateCurrentArticle(article: ArticleModel, index: number): void {
     this.model[index] = article;
@@ -34,7 +33,7 @@ export class ArticlesControllerService {
   }
 
   addArticle(article: ArticleModel): void {
-    this.model.unshift(article); 
+    this.model.unshift(article);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(this.model));
   }
   deleteArticle(index: number): void {

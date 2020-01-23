@@ -4,7 +4,6 @@ import { LoginService } from '../../services/login.service';
 import { CookiesService } from '../../services/cookies.service';
 import LoginForm from './login.form';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

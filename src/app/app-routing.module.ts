@@ -14,9 +14,9 @@ const routes: Routes = [
   { path: 'articles', component: ArticlesPageComponent, canActivate: [PageGuard]},
   { path: 'events', component: EventsPageComponent, canActivate: [PageGuard]},
   { path: 'gallery', component: GalleryPageComponent, canActivate: [PageGuard]},
-  { path: 'login', component: LoginComponent, canActivate: [PageGuard]},
-  { path: 'registration', component: RegisterComponent, canActivate: [PageGuard]},
-  { path: '**', component: NotFoundComponent, canActivate: [PageGuard]}
+  { path: 'login', component: LoginComponent},
+  { path: 'registration', component: RegisterComponent},
+  { path: '**', component: NotFoundComponent}
 ];
 
 @NgModule({

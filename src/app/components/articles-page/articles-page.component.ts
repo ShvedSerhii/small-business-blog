@@ -1,21 +1,21 @@
-import { Component } from "@angular/core";
-import { ArticleModel } from "./article/article.model";
-import { MatDialog } from "@angular/material/dialog";
-import { EditArticleComponent } from "./edit-article/edit-article.component";
-import { EditData } from "./edit-article/edit-data.model";
-import { ArticlesControllerService } from "src/app/services/articles-controller.service";
-import { CookiesService } from "src/app/services/cookies.service";
+import { Component } from '@angular/core';
+import { ArticleModel } from './article/article.model';
+import { MatDialog } from '@angular/material/dialog';
+import { EditArticleComponent } from './edit-article/edit-article.component';
+import { EditData } from './edit-article/edit-data.model';
+import { ArticlesControllerService } from 'src/app/services/articles-controller.service';
+import { CookiesService } from 'src/app/services/cookies.service';
 
 @Component({
-  selector: "app-articles-page",
-  templateUrl: "./articles-page.component.html",
-  styleUrls: ["./articles-page.component.scss"]
+  selector: 'app-articles-page',
+  templateUrl: './articles-page.component.html',
+  styleUrls: ['./articles-page.component.scss']
 })
 export class ArticlesPageComponent {
   public articles: ArticleModel[];
   public data: EditData;
   public searchText: any;
-  public isDesc: boolean = false;
+  public isDesc = false;
 
   constructor(
     public dialog: MatDialog,
@@ -27,17 +27,17 @@ export class ArticlesPageComponent {
   }
 
   isAuthorization() {
-    if (this.cookie.getCookie("token")) {
+    if (this.cookie.getCookie('token')) {
       return true;
     }
     return false;
   }
 
   sort() {
-    this.isDesc = !this.isDesc; //change the direction
-    let direction = this.isDesc ? 1 : -1;
+    this.isDesc = !this.isDesc; // change the direction
+    const direction = this.isDesc ? 1 : -1;
 
-    this.articles.sort(function(a, b) {
+    this.articles.sort((a, b) => {
       if (a.title < b.title) {
         return -1 * direction;
       } else if (a.title > b.title) {
@@ -50,7 +50,7 @@ export class ArticlesPageComponent {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(EditArticleComponent, {
-      width: "600px",
+      width: '600px',
       data: this.data
     });
 

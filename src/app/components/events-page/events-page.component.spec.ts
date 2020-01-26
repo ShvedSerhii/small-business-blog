@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EventsPageComponent } from './events-page.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('EventsPageComponent', () => {
   let component: EventsPageComponent;
@@ -8,7 +9,8 @@ describe('EventsPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [EventsPageComponent]
+      declarations: [EventsPageComponent],
+      schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));
 

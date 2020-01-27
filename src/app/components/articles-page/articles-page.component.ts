@@ -46,7 +46,7 @@ export class ArticlesPageComponent {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if (result.title && result.date && result.author && result.content) {
+      if (result.title && result.author && result.content) {
         this.articlesController.addArticle(result);
       }
     });

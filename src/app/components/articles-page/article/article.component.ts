@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { EditArticleComponent } from '../edit-article/edit-article.component';
 import { EditData } from '../edit-article/edit-data.model';
 import { ArticlesControllerService } from 'src/app/services/articles-controller/articles-controller.service';
+import { ArticleModel } from './article.model';
 
 @Component({
   selector: 'app-article',
@@ -10,12 +11,8 @@ import { ArticlesControllerService } from 'src/app/services/articles-controller/
   styleUrls: ['./article.component.scss']
 })
 export class ArticleComponent {
-  @Input() title: string;
-  @Input() author: string;
-  @Input() date: string;
-  @Input() image: string;
-  @Input() content: string;
   @Input() index: number;
+  @Input() article: ArticleModel;
 
   public data: EditData;
 

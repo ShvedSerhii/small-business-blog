@@ -1,15 +1,15 @@
 <mat-card class="card">
-    <mat-card-title>{{title}}</mat-card-title>
-    <mat-card-subtitle>{{author}} - {{date}}</mat-card-subtitle>
-    <img *ngIf="image" mat-card-image src="../../../../assets/image/{{image}}" alt="img">
-    <mat-card-content>{{content}}</mat-card-content>
+    <mat-card-title>{{article.title}}</mat-card-title>
+    <mat-card-subtitle>{{article.author}}</mat-card-subtitle>
+    <img *ngIf="article.image" mat-card-image src="../../../../assets/image/{{article.image}}" alt="img">
+    <mat-card-content>{{article.content}}</mat-card-content>
     <mat-card-actions class="menu-card">
         <div>
             <button mat-button>LIKE</button>
             <button mat-button>SHARE</button>
         </div>
         <div>
-            <a *ngIf="image" mat-button href="../../../../assets/image/{{image}}" download>SAVE IMAGE</a>
+            <a *ngIf="article.image" mat-button href="../../../../assets/image/{{article.image}}" download>SAVE IMAGE</a>
             <button mat-button (click)="openDialog()">EDIT</button>
             <button mat-button (click)="articlesController.deleteArticle(index);">DELETE</button>
         </div>

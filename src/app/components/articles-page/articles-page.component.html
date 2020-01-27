@@ -10,11 +10,10 @@
   </mat-card>
   <div class='list'>
     <div *ngFor="let article of articles | paginate: { itemsPerPage: 5, currentPage: p } | filter : searchText, let i = index">
-      <app-article [title]="article.title" [author]="article.author" [date]="article.date" [image]="article.image"
-        [content]="article.content" [index]='i'></app-article>
+      <app-article [article]="article" [index]="i"></app-article>
     </div>
     <div class="paginator">
       <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </div>
-  </div>
+  </div> 
 </div>  

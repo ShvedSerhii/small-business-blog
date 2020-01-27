@@ -30,10 +30,6 @@ export default class EditForm {
         validators: [Validators.required],
         updateOn: 'change'
       }),
-      date: new FormControl(this.model.date, {
-        validators: [Validators.required],
-        updateOn: 'change'
-      }),
       content: new FormControl(this.model.content, {
         validators: [Validators.required],
         updateOn: 'change'
@@ -44,7 +40,6 @@ export default class EditForm {
     this.formGroup.valueChanges.subscribe((data: any) => {
       this.model.title = data.title;
       this.model.author = data.author;
-      this.model.date = data.date;
       this.model.content = data.content;
     });
   }

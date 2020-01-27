@@ -4,7 +4,6 @@ export const Articles: ArticleModel[] = [
   {
     title:
       'Morbi ipsum lectus elementum leo eros sem vivamus quam eget nibh at nec proin',
-    date: '13.02.2019',
     author: 'Jane Li',
     image: 'img3.jpg',
     content: `Congue eros porta risus, tempus cursus ornare magna - lorem in gravida sapien,
@@ -21,7 +20,6 @@ export const Articles: ArticleModel[] = [
   {
     title:
       'At justo lectus nec at sagittis massa risus tempus malesuada proin sed sapien sit',
-    date: '21.10.2019',
     author: 'Sam Green',
     image: 'img1.jpg',
     content: `Lorem ipsum, tellus, eros molestie, ligula sit: duis sapien vivamus maecenas magna leo
@@ -38,7 +36,6 @@ export const Articles: ArticleModel[] = [
   {
     title:
       'Sapien quisque amet ornare, amet proin lorem orci amet malesuada auctor proin nam arcu',
-    date: '14.07.2019',
     author: 'Tom Yi',
     image: 'img2.jpg',
     content: `Ultricies - bibendum elementum pharetra ut quisque, morbi sem nulla massa, rutrum,

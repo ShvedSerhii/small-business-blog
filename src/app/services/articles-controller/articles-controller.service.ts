@@ -19,24 +19,24 @@ export class ArticlesControllerService {
     }
   }
 
-  getArticles(): ArticleModel[] {
+  public getArticles(): ArticleModel[] {
     return this.model;
   }
 
-  getCurrentArticle(index: number): ArticleModel {
+  public getCurrentArticle(index: number): ArticleModel {
     return this.model[index];
   }
 
-  updateCurrentArticle(article: ArticleModel, index: number): void {
+  public updateCurrentArticle(article: ArticleModel, index: number): void {
     this.model[index] = article;
     localStorage.setItem(STORAGE_KEY, JSON.stringify(this.model));
   }
 
-  addArticle(article: ArticleModel): void {
+  public addArticle(article: ArticleModel): void {
     this.model.unshift(article);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(this.model));
   }
-  deleteArticle(index: number): void {
+  public deleteArticle(index: number): void {
     this.model.splice(index, 1);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(this.model));
   }

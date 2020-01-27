@@ -24,7 +24,7 @@ export class ArticlesPageComponent {
     this.articles = articlesController.getArticles();
   }
 
-  sort() {
+  public sort(): void {
     this.isDesc = !this.isDesc; // change the direction
     const direction = this.isDesc ? 1 : -1;
 
@@ -39,7 +39,7 @@ export class ArticlesPageComponent {
     });
   }
 
-  openDialog(): void {
+  public openDialog(): void {
     const dialogRef = this.dialog.open(EditArticleComponent, {
       width: '600px',
       data: this.data

@@ -8,14 +8,14 @@ import { GalleryModel } from '../../models/GalleryModel';
   styleUrls: ['./gallery-page.component.scss']
 })
 export class GalleryPageComponent {
-  album: any;
+  public album: any;
   constructor(private lightbox: Lightbox) {
     this.album = GalleryModel;
   }
-  open(index: number): void {
+  public open(index: number): void {
     this.lightbox.open(this.album, index);
   }
-  close(): void {
+  public close(): void {
     this.lightbox.close();
   }
 }

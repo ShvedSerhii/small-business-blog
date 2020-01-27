@@ -7,7 +7,7 @@ import {
   DeleteOptions
 } from '../interfaces/api.interfaces';
 
-import { AppConfig } from '../../app.config';
+import { AppConfig } from '../../../environments/app.config';
 
 // api service
 @Injectable({

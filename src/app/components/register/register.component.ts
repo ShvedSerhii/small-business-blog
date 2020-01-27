@@ -16,7 +16,7 @@ export class RegisterComponent {
     this.form = new RegisterForm(this.model);
   }
 
-  onSubmit(form) {
+  public onSubmit(form): void {
     this.registrationService.registerUser(
       data => {
         console.log('data', data);

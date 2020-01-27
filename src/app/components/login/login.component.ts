@@ -20,11 +20,11 @@ export class LoginComponent {
     this.form = new LoginForm(this.model);
   }
 
-  logout() {
+  public logout(): void {
     this.cookie.deleteCookie('token');
   }
 
-  onSubmit(form) {
+  public onSubmit(form): void {
     this.loginService.loginUser(data => {
       console.log('data', data);
       form.reset();

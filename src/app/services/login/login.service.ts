@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
 import { ApiService } from '../api/api.service';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ import { ApiService } from '../api/api.service';
 export class LoginService {
   constructor(private api: ApiService) {}
 
-  loginUser(success, body) {
+  public loginUser(success, body): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({
         value: 'application/json'
@@ -26,7 +27,7 @@ export class LoginService {
     });
   }
 
-  error(error) {
+  public error(error): void {
     console.log('error', error);
   }
 }

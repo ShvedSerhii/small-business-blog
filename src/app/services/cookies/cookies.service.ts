@@ -7,25 +7,24 @@ import { CookieService } from 'ngx-cookie-service';
 export class CookiesService {
   constructor(private cookieService: CookieService) {}
 
-  setCookie(
+  public setCookie(
     key: string,
     value: string,
     expires: number | Date = 365,
     secure: any = true
-  ) {
+  ): void {
     this.cookieService.set(key, value, expires, secure);
   }
 
-  getCookie(key: string): string {
+  public getCookie(key: string): string {
     return this.cookieService.get(key);
   }
 
-  deleteCookie(key: string) {
+  public deleteCookie(key: string): void {
     this.cookieService.delete(key);
   }
 
   public isAuthorization(): boolean {
     return this.getCookie('token') ? true : false; 
-  }
-    
+  } 
 }

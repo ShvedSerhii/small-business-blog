@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./events-list.component.scss']
 })
 export class EventsListComponent {
-  typesOfShoes: string[] = [
+  public typesOfShoes: string[] = [
     'Business conference',
     'Management courses',
     'Marketing courses',

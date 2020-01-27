@@ -5,10 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent {
-  public homeActive = '';
-  public eventsActive = '';
-  public galleryActive = '';
-  public articlesActive = '';
-  public loginActive = '';
-}
+export class MenuComponent { }

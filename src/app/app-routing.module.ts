@@ -10,14 +10,15 @@ import { RegisterComponent } from './components/register/register.component';
 import { PageGuard } from './guards/page.guard';
 
 const routes: Routes = [
-  { path: '', component: MainPageComponent, canActivate: [PageGuard]},
+  { path: 'home', component: MainPageComponent, canActivate: [PageGuard]},
   { path: 'articles', component: ArticlesPageComponent, canActivate: [PageGuard]},
   { path: 'events', component: EventsPageComponent, canActivate: [PageGuard]},
   { path: 'gallery', component: GalleryPageComponent, canActivate: [PageGuard]},
   { path: 'login', component: LoginComponent},
   { path: 'registration', component: RegisterComponent},
+  { path: '', redirectTo: '/home', pathMatch: 'full'}, 
   { path: '**', component: NotFoundComponent}
-];
+]; 
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

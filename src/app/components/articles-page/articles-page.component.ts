@@ -42,7 +42,7 @@ export class ArticlesPageComponent {
   public openDialog(): void {
     const dialogRef = this.dialog.open(EditArticleComponent, {
       width: '600px',
-      data: this.data
+      data: new EditData()
     });
 
     dialogRef.afterClosed().subscribe(result => {

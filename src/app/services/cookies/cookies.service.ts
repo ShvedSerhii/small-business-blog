@@ -25,6 +25,6 @@ export class CookiesService {
   }
 
   public isAuthorization(): boolean {
-    return this.getCookie('token') ? true : false; 
-  } 
+    return this.getCookie('token') ? true : false;
+  }
 }

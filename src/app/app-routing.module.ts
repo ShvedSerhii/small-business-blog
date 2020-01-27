@@ -17,9 +17,9 @@ const routes: Routes = [
   { path: 'gallery', component: GalleryPageComponent, canActivate: [PageGuard]},
   { path: 'login', component: LoginComponent, canActivate: [LogoutGuard]},
   { path: 'registration', component: RegisterComponent, canActivate: [LogoutGuard]},
-  { path: '', redirectTo: '/home', pathMatch: 'full'}, 
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: '**', component: NotFoundComponent, canActivate: [PageGuard]}
-]; 
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

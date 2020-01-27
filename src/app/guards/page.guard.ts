@@ -13,8 +13,8 @@ export class PageGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | boolean {
 
-      if (this.cookie.getCookie('token')) { 
-        return true; 
+      if (this.cookie.getCookie('token')) {
+        return true;
       }
       this.router.navigate(['/login']);
       return false;

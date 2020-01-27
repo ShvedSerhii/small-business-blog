@@ -7,16 +7,16 @@ import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
-export class PageGuard implements CanActivate {
+export class LogoutGuard implements CanActivate {
 
   constructor(private cookie: CookiesService, private router: Router) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | boolean {
 
-      if (this.cookie.getCookie('token')) { 
+      if (!this.cookie.getCookie('token')) { 
         return true; 
       }
-      this.router.navigate(['/login']);
+      this.router.navigate(['/home']);
       return false;
   }
 }

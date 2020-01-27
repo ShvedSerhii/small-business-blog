@@ -1,7 +1,7 @@
-<mat-nav-list>
-    <a [routerLink]="'/home'"  routerLinkActive="active">HOME</a>
-    <a [routerLink]="'/events'"  routerLinkActive="active">EVENTS</a>
-    <a [routerLink]="'/gallery'"  routerLinkActive="active">GALLERY</a>
-    <a [routerLink]="'/articles'"  routerLinkActive="active">ARTICLES</a>
-    <a [routerLink]="'/login'"  routerLinkActive="active">LOGIN</a>
+<mat-nav-list *ngIf="cookie.isAuthorization()">
+    <a [routerLink]="'/home'" routerLinkActive="active">HOME</a>
+    <a [routerLink]="'/events'" routerLinkActive="active">EVENTS</a>
+    <a [routerLink]="'/gallery'" routerLinkActive="active">GALLERY</a>
+    <a [routerLink]="'/articles'" routerLinkActive="active">ARTICLES</a>
+    <a [routerLink]="'/login'" (click)="logout()">LOGOUT</a>
 </mat-nav-list>

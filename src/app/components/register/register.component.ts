@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RegistrationService } from '../../services/registration/registration.service';
 import { RegisterModel } from './register.model';
 import RegisterForm from './register.form';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +12,7 @@ import RegisterForm from './register.form';
 export class RegisterComponent {
   public model: RegisterModel;
   public form: RegisterForm;
-  constructor(private registrationService: RegistrationService) {
+  constructor(private registrationService: RegistrationService, private router: Router) {
     this.model = new RegisterModel();
     this.form = new RegisterForm(this.model);
   }
@@ -20,8 +21,7 @@ export class RegisterComponent {
     this.registrationService.registerUser(
       data => {
         console.log('data', data);
-        form.reset();
-        alert('You are registered!');
+        this.router.navigate(['/home']);
       },
       {"name": form.value.name, "surname": form.value.surname, "email": form.value.email,
           "phone": form.value.phone, "password": form.value.password}

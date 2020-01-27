@@ -22,7 +22,7 @@ export class LoginService {
         success,
         error: this.error.bind(this)
       },
-      body,
+      body: JSON.stringify(body),
       httpOptions
     });
   }

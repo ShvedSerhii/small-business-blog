@@ -22,7 +22,7 @@ export class RegistrationService {
         success,
         error: this.error.bind(this)
       },
-      body: JSON.parse(body.toString()),
+      body,
       httpOptions
     });
   }

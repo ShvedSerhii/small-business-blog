@@ -23,8 +23,8 @@ export class RegisterComponent {
         form.reset();
         alert('You are registered!');
       },
-      `{"name":"${form.value.name}", "surname":"${form.value.surname}", "email":"${form.value.email}",
-          "phone":"${form.value.phone}", "password":"${form.value.password}"}`
+      {"name": form.value.name, "surname": form.value.surname, "email": form.value.email,
+          "phone": form.value.phone, "password": form.value.password}
     );
   }
 }

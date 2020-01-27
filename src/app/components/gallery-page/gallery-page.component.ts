@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Lightbox } from 'ngx-lightbox';
-import { GalleryModel } from '../models/GalleryModel';
+import { GalleryModel } from '../../models/GalleryModel';
 
 @Component({
   selector: 'app-gallery-page',

@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
-import { ApiService } from './api.service';
+import { ApiService } from '../api/api.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RegistrationService {
+export class LoginService {
   constructor(private api: ApiService) {}
 
-  registerUser(success, body) {
+  loginUser(success, body) {
     const httpOptions = {
       headers: new HttpHeaders({
         value: 'application/json'
@@ -16,12 +16,12 @@ export class RegistrationService {
     };
 
     return this.api.post({
-      url: '/api/registration',
+      url: '/api/login',
       handlers: {
         success,
         error: this.error.bind(this)
       },
-      body: JSON.parse(body.toString()),
+      body,
       httpOptions
     });
   }

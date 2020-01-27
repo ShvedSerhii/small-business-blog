@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ChartsModel } from '../models/ChartsModel';
+import { ChartsModel } from '../../models/ChartsModel';
 
 @Component({
   selector: 'app-main-page',

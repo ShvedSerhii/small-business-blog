@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
-import { CookiesService } from '../services/cookies.service';
+import { CookiesService } from '../services/cookies/cookies.service';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -13,7 +13,9 @@ export class PageGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | boolean {
 
-      if (this.cookie.getCookie('token')) { return true; }
+      if (this.cookie.getCookie('token')) { 
+        return true; 
+      }
       alert('View only for authorized users!');
       this.router.navigate(['/login']);
       return false;

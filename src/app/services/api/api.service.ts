@@ -5,9 +5,9 @@ import {
   PostOptions,
   PutOptions,
   DeleteOptions
-} from './interfaces/api.interfaces';
+} from '../interfaces/api.interfaces';
 
-import { AppConfig } from '../app.config';
+import { AppConfig } from '../../app.config';
 
 // api service
 @Injectable({

@@ -3,8 +3,7 @@ import { ArticleModel } from './article/article.model';
 import { MatDialog } from '@angular/material/dialog';
 import { EditArticleComponent } from './edit-article/edit-article.component';
 import { EditData } from './edit-article/edit-data.model';
-import { ArticlesControllerService } from 'src/app/services/articles-controller.service';
-import { CookiesService } from 'src/app/services/cookies.service';
+import { ArticlesControllerService } from 'src/app/services/articles-controller/articles-controller.service';
 
 @Component({
   selector: 'app-articles-page',
@@ -20,17 +19,9 @@ export class ArticlesPageComponent {
   constructor(
     public dialog: MatDialog,
     public articlesController: ArticlesControllerService,
-    private cookie: CookiesService
   ) {
     this.data = new EditData();
     this.articles = articlesController.getArticles();
-  }
-
-  isAuthorization() {
-    if (this.cookie.getCookie('token')) {
-      return true;
-    }
-    return false;
   }
 
   sort() {

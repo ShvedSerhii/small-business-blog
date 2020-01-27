@@ -2,8 +2,7 @@ import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { EditArticleComponent } from '../edit-article/edit-article.component';
 import { EditData } from '../edit-article/edit-data.model';
-import { ArticlesControllerService } from 'src/app/services/articles-controller.service';
-import { CookiesService } from 'src/app/services/cookies.service';
+import { ArticlesControllerService } from 'src/app/services/articles-controller/articles-controller.service';
 
 @Component({
   selector: 'app-article',
@@ -23,16 +22,8 @@ export class ArticleComponent {
   constructor(
     public dialog: MatDialog,
     public articlesController: ArticlesControllerService,
-    private cookie: CookiesService
   ) {
     this.data = new EditData();
-  }
-
-  isAuthorization() {
-    if (this.cookie.getCookie('token')) {
-      return true;
-    }
-    return false;
   }
 
   openDialog(): void {

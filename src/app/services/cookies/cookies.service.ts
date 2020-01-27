@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
@@ -24,4 +23,9 @@ export class CookiesService {
   deleteCookie(key: string) {
     this.cookieService.delete(key);
   }
+
+  public isAuthorization(): boolean {
+    return this.getCookie('token') ? true : false; 
+  }
+    
 }

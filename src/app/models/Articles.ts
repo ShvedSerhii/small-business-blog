@@ -1,4 +1,4 @@
-import { ArticleModel } from '../articles-page/article/article.model';
+import { ArticleModel } from '../components/articles-page/article/article.model';
 
 export const Articles: ArticleModel[] = [
   {

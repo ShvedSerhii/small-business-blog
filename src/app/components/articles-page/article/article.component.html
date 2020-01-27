@@ -8,7 +8,7 @@
             <button mat-button>LIKE</button>
             <button mat-button>SHARE</button>
         </div>
-        <div *ngIf="isAuthorization()">
+        <div>
             <a *ngIf="image" mat-button href="../../../../assets/image/{{image}}" download>SAVE IMAGE</a>
             <button mat-button (click)="openDialog()">EDIT</button>
             <button mat-button (click)="articlesController.deleteArticle(index);">DELETE</button>

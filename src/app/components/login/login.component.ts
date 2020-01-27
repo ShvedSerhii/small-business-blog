@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { LoginModel } from './login.model';
-import { LoginService } from '../../services/login.service';
-import { CookiesService } from '../../services/cookies.service';
+import { LoginService } from '../../services/login/login.service';
+import { CookiesService } from '../../services/cookies/cookies.service';
 import LoginForm from './login.form';
 
 @Component({
@@ -14,16 +14,12 @@ export class LoginComponent {
   public form: LoginForm;
   constructor(
     private loginService: LoginService,
-    private cookie: CookiesService
+    public cookie: CookiesService
   ) {
     this.model = new LoginModel();
     this.form = new LoginForm(this.model);
   }
 
-  isAuthorization() {
-    if (!this.cookie.getCookie('token')) { return true; }
-    return false;
-  }
   logout() {
     this.cookie.deleteCookie('token');
   }

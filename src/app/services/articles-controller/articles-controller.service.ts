@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ArticleModel } from '../components/articles-page/article/article.model';
-import { Articles } from './../components/models/Articles';
+import { ArticleModel } from '../../components/articles-page/article/article.model';
+import { Articles } from '../../models/Articles';
 
 const STORAGE_KEY = 'local_articles';
 

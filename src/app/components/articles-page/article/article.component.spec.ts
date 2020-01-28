@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { DebugElement } from '@angular/core';
+import { BrowserModule, By } from '@angular/platform-browser';
 
 import { ArticleComponent } from './article.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
@@ -8,6 +10,8 @@ import { ArticlesControllerService } from 'src/app/services/articles-controller/
 describe('ArticleComponent', () => {
   let component: ArticleComponent;
   let fixture: ComponentFixture<ArticleComponent>;
+  let de: DebugElement;
+  let el: HTMLElement;
 
   const matDialogStub = {
     open: () => {}
@@ -38,4 +42,11 @@ describe('ArticleComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+//   it('should hide contents if show is false', () => {
+//     // const button = debugElement.query(By.css('button')).nativeElement;
+//     // button.click();   // this will change show to false
+//     // fixture.detectChanges();
+//     expect(fixture.debugElement.query(By.css('img'))).toBeUndefined();
+// });
 });

@@ -1,13 +1,16 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
 import { ApiService } from '../api/api.service';
 import { Observable } from 'rxjs';
+import { BusService } from '../bus/bus.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RegistrationService {
-  constructor(private api: ApiService) {}
+export class RegistrationService implements OnDestroy {
+  constructor(private api: ApiService, private bus: BusService) {
+    bus.subscribe('register', this.registerUser, this);
+  }
 
   public registerUser(success, body): Observable<any> {
     const httpOptions = {
@@ -29,5 +32,9 @@ export class RegistrationService {
 
   public error(error): void {
     console.log('error', error);
+  }
+
+  ngOnDestroy() {
+    this.bus.unsubscribe('register', this.registerUser);
   }
 }

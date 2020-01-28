@@ -29,11 +29,13 @@ export class LoginComponent {
   }
 
   public onSubmit(form): void {
-    this.bus.publish('login', data => {
-      console.log('data', data);
-      this.router.navigate(['/home']);
-    }, 
-     {name: form.value.email, password: form.value.password});
+    this.bus.publish(
+      'login',
+      data => {
+        console.log('data', data);
+        this.router.navigate(['/home']);
+      },
+      { name: form.value.email, password: form.value.password }
+    );
   }
-} 
- 
+}

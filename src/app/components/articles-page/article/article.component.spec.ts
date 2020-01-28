@@ -10,17 +10,19 @@ import { ArticlesControllerService } from 'src/app/services/articles-controller/
 describe('ArticleComponent', () => {
   let component: ArticleComponent;
   let fixture: ComponentFixture<ArticleComponent>;
+  /* tslint:disable */
   let de: DebugElement;
   let el: HTMLElement;
+  /* tslint:enable */
 
   const matDialogStub = {
     open: () => {}
-  }
+  };
 
   const articlesControllerServiceStub = {
     getCurrentArticle: () => {},
-    updateCurrentArticle: () => {} 
-  }
+    updateCurrentArticle: () => {}
+  };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -29,7 +31,7 @@ describe('ArticleComponent', () => {
         {provide: ArticlesControllerService, useValue: articlesControllerServiceStub},
         {provide: MatDialog, useValue: matDialogStub}
       ],
-      schemas: [ NO_ERRORS_SCHEMA ] 
+      schemas: [ NO_ERRORS_SCHEMA ]
     }).compileComponents();
   }));
 

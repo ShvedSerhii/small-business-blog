@@ -3,6 +3,7 @@ import { RegistrationService } from '../../services/registration/registration.se
 import { RegisterModel } from './register.model';
 import RegisterForm from './register.form';
 import { Router } from '@angular/router';
+import { BusService } from 'src/app/services/bus/bus.service';
 
 @Component({
   selector: 'app-register',
@@ -12,19 +13,29 @@ import { Router } from '@angular/router';
 export class RegisterComponent {
   public model: RegisterModel;
   public form: RegisterForm;
-  constructor(private registrationService: RegistrationService, private router: Router) {
+  constructor(
+    private registrationService: RegistrationService,
+    private router: Router,
+    private bus: BusService
+  ) {
     this.model = new RegisterModel();
     this.form = new RegisterForm(this.model);
   }
 
   public onSubmit(form): void {
-    this.registrationService.registerUser(
+    this.bus.publish(
+      'register',
       data => {
         console.log('data', data);
         this.router.navigate(['/home']);
       },
-      {name: form.value.name, surname: form.value.surname, email: form.value.email,
-          phone: form.value.phone, password: form.value.password}
+      {
+        name: form.value.name,
+        surname: form.value.surname,
+        email: form.value.email,
+        phone: form.value.phone,
+        password: form.value.password
+      }
     );
   }
 }

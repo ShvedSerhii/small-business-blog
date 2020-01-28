@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { LoginModel } from './login.model';
-import { LoginService } from '../../services/login/login.service';
 import { CookiesService } from '../../services/cookies/cookies.service';
 import LoginForm from './login.form';
 import { Router } from '@angular/router';
+import { BusService } from 'src/app/services/bus/bus.service';
+import { LoginService } from 'src/app/services/login/login.service';
 
 @Component({
   selector: 'app-login',
@@ -14,9 +15,10 @@ export class LoginComponent {
   public model: LoginModel;
   public form: LoginForm;
   constructor(
-    private loginService: LoginService,
+    public loginService: LoginService,
     public cookie: CookiesService,
-    private router: Router
+    private router: Router,
+    private bus: BusService
   ) {
     this.model = new LoginModel();
     this.form = new LoginForm(this.model);
@@ -27,9 +29,11 @@ export class LoginComponent {
   }
 
   public onSubmit(form): void {
-    this.loginService.loginUser(data => {
+    this.bus.publish('login', data => {
       console.log('data', data);
       this.router.navigate(['/home']);
-    }, {name: form.value.email, password: form.value.password});
+    }, 
+     {name: form.value.email, password: form.value.password});
   }
-}
+} 
+ 

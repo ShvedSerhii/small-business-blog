@@ -5,7 +5,9 @@ import { from, Subject } from 'rxjs';
 /* tslint:enable */
 
 // service for communication between modules, components, services
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class BusService {
 
   private listeners: any;

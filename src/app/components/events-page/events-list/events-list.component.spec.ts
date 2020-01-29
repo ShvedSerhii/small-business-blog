@@ -1,6 +1,8 @@
+import { MatListModule } from '@angular/material/list';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EventsListComponent } from './events-list.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('EventsListComponent', () => {
   let component: EventsListComponent;
@@ -8,7 +10,9 @@ describe('EventsListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [EventsListComponent]
+      declarations: [EventsListComponent],
+      imports: [MatListModule],
+      schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));
 
@@ -22,3 +26,4 @@ describe('EventsListComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

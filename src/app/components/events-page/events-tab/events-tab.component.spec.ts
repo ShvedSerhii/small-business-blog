@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EventsTabComponent } from './events-tab.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('EventsTabComponent', () => {
   let component: EventsTabComponent;
@@ -8,7 +9,8 @@ describe('EventsTabComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [EventsTabComponent]
+      declarations: [EventsTabComponent],
+      schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));
 

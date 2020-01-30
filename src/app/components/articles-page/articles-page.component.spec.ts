@@ -54,4 +54,16 @@ describe('ArticlesPageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it("should call sort method", () => {
+    spyOn(component, "sort");
+    component.sort();
+    expect(component.sort).toHaveBeenCalled();
+  });
+
+  it("should call openDialog method", () => {
+    spyOn(component, "openDialog");
+    component.openDialog();
+    expect(component.openDialog).toHaveBeenCalled();
+  });
 });

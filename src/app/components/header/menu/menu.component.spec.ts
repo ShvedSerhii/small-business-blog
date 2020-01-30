@@ -29,4 +29,10 @@ describe('MenuComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it("should call logout method", () => {
+    spyOn(component, "logout");
+    component.logout();
+    expect(component.logout).toHaveBeenCalled();
+  }); 
 });

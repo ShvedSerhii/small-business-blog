@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 import { BrowserModule, By } from '@angular/platform-browser';
-import { ViewChild } from '@angular/core';
 import { ArticleComponent } from './article.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -21,12 +20,14 @@ describe('ArticleComponent', () => {
 
   const articlesControllerServiceStub = {
     getCurrentArticle: () => {},
-    updateCurrentArticle: () => {}
+    updateCurrentArticle: () => {},
+    deleteArticle: () => {}
   };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ArticleComponent],
+      imports: [BrowserModule],
       providers: [
         {provide: ArticlesControllerService, useValue: articlesControllerServiceStub},
         {provide: MatDialog, useValue: matDialogStub}
@@ -45,4 +46,13 @@ describe('ArticleComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it("should call openDialog method", () => {
+    fixture.detectChanges();
+    spyOn<any>(component, "openDialog");
+    el = fixture.debugElement.query(By.css("button")).nativeElement;
+    el.click();
+    expect(component.openDialog).toHaveBeenCalledTimes(0); 
+  });
+ 
 });

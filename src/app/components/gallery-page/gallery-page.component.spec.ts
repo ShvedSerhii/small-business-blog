@@ -27,4 +27,16 @@ describe('GalleryPageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it("should open sort method", () => {
+    spyOn(component, "open");
+    component.open(1);
+    expect(component.open).toHaveBeenCalled();
+  });
+
+  it("should call close method", () => {
+    spyOn(component, "close");
+    component.close();
+    expect(component.close).toHaveBeenCalled();
+  });
 });

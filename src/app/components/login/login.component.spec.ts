@@ -68,7 +68,7 @@ describe("LoginComponent", () => {
     expect(component.form.formGroup.valid).toBeTruthy();
   });
 
-  it("should call onSubmit method", () => { 
+  it("should call onSubmit method", () => {
     fixture.detectChanges();
     spyOn<any>(component, "onSubmit");
     el = fixture.debugElement.query(By.css("button")).nativeElement;

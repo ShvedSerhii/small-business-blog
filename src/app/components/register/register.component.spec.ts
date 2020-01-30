@@ -10,13 +10,13 @@ describe('RegisterComponent', () => {
   let component: RegisterComponent;
   let fixture: ComponentFixture<RegisterComponent>;
 
-  const registrationServiceStub = {  }
+  const registrationServiceStub = {  };
   const routerStub = {
     navigate: () => {}
-  }
+  };
   const busStub = {
     publish: () => {}
-  }
+  };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -24,7 +24,7 @@ describe('RegisterComponent', () => {
       providers: [
         {provide: RegistrationService, useValue: registrationServiceStub},
         {provide: Router, useValue: routerStub},
-        {provide: BusService, useValue: busStub}, 
+        {provide: BusService, useValue: busStub},
       ],
       schemas: [NO_ERRORS_SCHEMA]
     })

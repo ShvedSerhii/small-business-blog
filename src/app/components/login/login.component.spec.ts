@@ -11,16 +11,16 @@ describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
 
-  const loginServiceStub = {  }
+  const loginServiceStub = {  };
   const cookieStub = {
     deleteCookie: () => {}
-  }
+  };
   const routerStub = {
     navigate: () => {}
-  }
+  };
   const busStub = {
     publish: () => {}
-  }
+  };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -29,7 +29,7 @@ describe('LoginComponent', () => {
         {provide: LoginService, useValue: loginServiceStub},
         {provide: CookiesService, useValue: cookieStub},
         {provide: Router, useValue: routerStub},
-        {provide: BusService, useValue: busStub}, 
+        {provide: BusService, useValue: busStub},
       ],
       schemas: [NO_ERRORS_SCHEMA]
     })

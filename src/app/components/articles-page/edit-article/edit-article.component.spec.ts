@@ -8,8 +8,8 @@ describe('EditArticleComponent', () => {
   let component: EditArticleComponent;
   let fixture: ComponentFixture<EditArticleComponent>;
 
-  const dialogRefStub = { }
-  const matDialogDataStub = {}
+  const dialogRefStub = { };
+  const matDialogDataStub = {};
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -18,7 +18,7 @@ describe('EditArticleComponent', () => {
         { provide: MatDialogRef, useValue: dialogRefStub },
         { provide: MAT_DIALOG_DATA, useValue: matDialogDataStub }
       ],
-      schemas: [ NO_ERRORS_SCHEMA ] 
+      schemas: [ NO_ERRORS_SCHEMA ]
     })
     .compileComponents();
   }));

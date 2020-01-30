@@ -1,6 +1,5 @@
 import { MatListModule } from '@angular/material/list';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { EventsListComponent } from './events-list.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 
@@ -26,4 +25,3 @@ describe('EventsListComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-

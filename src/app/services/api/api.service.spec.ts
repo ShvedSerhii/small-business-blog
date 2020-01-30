@@ -9,13 +9,13 @@ describe('ApiService', () => {
    get: () => {},
    put: () => {},
    delete: () => {}
- } 
+ };
 
-  beforeEach(() => TestBed.configureTestingModule({
-    providers: [{ provide: HttpClient, useValue: httpClientStub }]  
+ beforeEach(() => TestBed.configureTestingModule({
+    providers: [{ provide: HttpClient, useValue: httpClientStub }]
   }));
 
-  it('should be created', () => {
+ it('should be created', () => {
     const service: ApiService = TestBed.get(ApiService);
     expect(service).toBeTruthy();
   });

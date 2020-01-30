@@ -7,16 +7,16 @@ import { BusService } from '../bus/bus.service';
 describe('LoginService', () => {
   const apiStub = {
     post: () => {}
-  }
+  };
   const busStub = {
     subscribe: () => {},
     unsubscribe: () => {}
-  }
+  };
 
   beforeEach(() => TestBed.configureTestingModule({
     providers: [
       { provide: ApiService, useValue: apiStub },
-      { provide: BusService, useValue: busStub } 
+      { provide: BusService, useValue: busStub }
 
     ]
   }));

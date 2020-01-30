@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 import { BrowserModule, By } from '@angular/platform-browser';
-import { ViewChild } from "@angular/core";
+import { ViewChild } from '@angular/core';
 import { ArticleComponent } from './article.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -38,7 +38,7 @@ describe('ArticleComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ArticleComponent);
     component = fixture.componentInstance;
-    component.article = {title: "", image: "", author: "", content: ""};
+    component.article = {title: '', image: '', author: '', content: ''};
     fixture.detectChanges();
   });
 

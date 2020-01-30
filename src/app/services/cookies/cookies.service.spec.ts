@@ -8,10 +8,10 @@ describe('CookiesService', () => {
     set: () => {},
     get: () => {},
     delete: () => {}
-  }
+  };
 
   beforeEach(() => TestBed.configureTestingModule({
-    providers: [{ provide: CookieService, useValue: cookieServiceStub }] 
+    providers: [{ provide: CookieService, useValue: cookieServiceStub }]
   }));
 
   it('should be created', () => {

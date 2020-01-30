@@ -1,15 +1,15 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { DebugElement } from "@angular/core";
-import { BrowserModule, By } from "@angular/platform-browser";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { LoginComponent } from "./login.component";
-import { LoginService } from "src/app/services/login/login.service";
-import { CookiesService } from "src/app/services/cookies/cookies.service";
-import { Router } from "@angular/router";
-import { BusService } from "src/app/services/bus/bus.service";
-import { NO_ERRORS_SCHEMA } from "@angular/core";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { DebugElement } from '@angular/core';
+import { BrowserModule, By } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login.component';
+import { LoginService } from 'src/app/services/login/login.service';
+import { CookiesService } from 'src/app/services/cookies/cookies.service';
+import { Router } from '@angular/router';
+import { BusService } from 'src/app/services/bus/bus.service';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
-describe("LoginComponent", () => {
+describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
   let de: DebugElement;
@@ -43,41 +43,41 @@ describe("LoginComponent", () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
-    de = fixture.debugElement.query(By.css("form"));
+    de = fixture.debugElement.query(By.css('form'));
     el = de.nativeElement;
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it("form invalid when empty", () => {
+  it('form invalid when empty', () => {
     expect(component.form.formGroup.valid).toBeFalsy();
   });
 
-  it("form invalid", () => {
-    component.form.formGroup.controls["email"].setValue("test");
-    component.form.formGroup.controls["password"].setValue("test");
+  it('form invalid', () => {
+    component.form.formGroup.controls.email.setValue('test');
+    component.form.formGroup.controls.password.setValue('test');
     expect(component.form.formGroup.valid).toBeFalsy();
   });
 
-  it("form valid", () => {
-    component.form.formGroup.controls["email"].setValue("test@test.com");
-    component.form.formGroup.controls["password"].setValue("password");
+  it('form valid', () => {
+    component.form.formGroup.controls.email.setValue('test@test.com');
+    component.form.formGroup.controls.password.setValue('password');
     expect(component.form.formGroup.valid).toBeTruthy();
   });
 
-  it("should call onSubmit method", () => {
+  it('should call onSubmit method', () => {
     fixture.detectChanges();
-    spyOn<any>(component, "onSubmit");
-    el = fixture.debugElement.query(By.css("button")).nativeElement;
+    spyOn<any>(component, 'onSubmit');
+    el = fixture.debugElement.query(By.css('button')).nativeElement;
     el.click();
     expect(component.onSubmit).toHaveBeenCalledTimes(0);
   });
 
-  it("should call logout method", () => {
-    spyOn(component, "logout");
+  it('should call logout method', () => {
+    spyOn(component, 'logout');
     component.logout();
     expect(component.logout).toHaveBeenCalled();
   });

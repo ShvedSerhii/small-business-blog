@@ -30,9 +30,9 @@ describe('MenuComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it("should call logout method", () => {
-    spyOn(component, "logout");
+  it('should call logout method', () => {
+    spyOn(component, 'logout');
     component.logout();
     expect(component.logout).toHaveBeenCalled();
-  }); 
+  });
 });

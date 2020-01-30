@@ -47,12 +47,12 @@ describe('ArticleComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it("should call openDialog method", () => {
+  it('should call openDialog method', () => {
     fixture.detectChanges();
-    spyOn<any>(component, "openDialog");
-    el = fixture.debugElement.query(By.css("button")).nativeElement;
+    spyOn<any>(component, 'openDialog');
+    el = fixture.debugElement.query(By.css('button')).nativeElement;
     el.click();
-    expect(component.openDialog).toHaveBeenCalledTimes(0); 
+    expect(component.openDialog).toHaveBeenCalledTimes(0);
   });
- 
+
 });

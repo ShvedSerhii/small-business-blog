@@ -9,7 +9,7 @@
             <button mat-button>SHARE</button>
         </div>
         <div>
-            <a *ngIf="article.image" mat-button href="../../../../assets/image/{{article.image}}" download>SAVE IMAGE</a>
+            <a *ngIf="article.image" mat-button href="../../../../assets/image/{{article.image}}" download>SAVE IMAGE</a> 
             <button mat-button (click)="openDialog()">EDIT</button>
             <button mat-button (click)="articlesController.deleteArticle(index);">DELETE</button>
         </div>

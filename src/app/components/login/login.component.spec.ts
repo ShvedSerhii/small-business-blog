@@ -56,31 +56,29 @@ describe("LoginComponent", () => {
     expect(component.form.formGroup.valid).toBeFalsy();
   });
 
-  it('form invalid', () => {
-    component.form.formGroup.controls['email'].setValue('test');
-    component.form.formGroup.controls['password'].setValue('test');
+  it("form invalid", () => {
+    component.form.formGroup.controls["email"].setValue("test");
+    component.form.formGroup.controls["password"].setValue("test");
     expect(component.form.formGroup.valid).toBeFalsy();
   });
 
-  it('form valid', () => {
-    component.form.formGroup.controls['email'].setValue('test@test.com');
-    component.form.formGroup.controls['password'].setValue('password');
+  it("form valid", () => {
+    component.form.formGroup.controls["email"].setValue("test@test.com");
+    component.form.formGroup.controls["password"].setValue("password");
     expect(component.form.formGroup.valid).toBeTruthy();
   });
 
-  it('should call submit method', () => {
+  it("should call onSubmit method", () => { 
     fixture.detectChanges();
-    spyOn<any>(component, 'onSubmit');
-    el = fixture.debugElement.query(By.css('button')).nativeElement;
+    spyOn<any>(component, "onSubmit");
+    el = fixture.debugElement.query(By.css("button")).nativeElement;
     el.click();
     expect(component.onSubmit).toHaveBeenCalledTimes(0);
   });
 
-  it('should call logout method', () => {
-    spyOn(component, 'logout');
+  it("should call logout method", () => {
+    spyOn(component, "logout");
     component.logout();
     expect(component.logout).toHaveBeenCalled();
-});
-
-
+  });
 });

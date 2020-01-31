@@ -16,4 +16,8 @@ export class EditArticleComponent {
   ) {
     this.form = new EditForm(data);
   }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 }

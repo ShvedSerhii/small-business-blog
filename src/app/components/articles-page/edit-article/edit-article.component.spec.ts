@@ -53,4 +53,10 @@ describe('EditArticleComponent', () => {
     component.form.formGroup.controls.content.setValue('test');
     expect(component.form.formGroup.valid).toBeTruthy();
   });
+
+  it('should call onNoClick method', () => {
+    spyOn(component, 'onNoClick');
+    component.onNoClick();
+    expect(component.onNoClick).toHaveBeenCalled();
+  });
 });

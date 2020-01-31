@@ -30,6 +30,9 @@ export class ArticleComponent {
     });
 
     dialogRef.afterClosed().subscribe(result => {
+      if (!result) {
+        return;
+      }
       if (result.title && result.author && result.content) {
         this.articlesController.updateCurrentArticle(result, this.index);
       }

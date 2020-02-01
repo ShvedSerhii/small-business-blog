@@ -26,7 +26,7 @@ export class ArticleComponent {
   public openDialog(): void {
     const dialogRef = this.dialog.open(EditArticleComponent, {
       width: '600px',
-      data: this.articlesController.getCurrentArticle(this.index)
+      data: JSON.parse(JSON.stringify(this.articlesController.getCurrentArticle(this.index)))
     });
 
     dialogRef.afterClosed().subscribe(result => {

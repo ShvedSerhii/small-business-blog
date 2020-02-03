@@ -2,7 +2,7 @@
   <mat-card class="card">
     <button mat-button (click)="openDialog()">+ ADD NEW ARTICLE</button>
     <div class="menu">
-      <button (click)='sort()' mat-button>SORT</button>
+      <button (click)='articlesController.sortArticles()' mat-button>SORT</button>
       <mat-form-field>
         <input matInput type="text" [(ngModel)]="searchText"  placeholder="Filter by Title of Articles" />
       </mat-form-field>

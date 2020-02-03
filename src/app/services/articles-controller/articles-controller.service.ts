@@ -9,6 +9,7 @@ const STORAGE_KEY = 'local_articles';
 })
 export class ArticlesControllerService {
   public model: ArticleModel[];
+  public isDesc = false;
 
   constructor() {
     if (localStorage.getItem(STORAGE_KEY)) {
@@ -40,4 +41,20 @@ export class ArticlesControllerService {
     this.model.splice(index, 1);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(this.model));
   }
+
+  public sortArticles(): void {
+    this.isDesc = !this.isDesc; // change the direction
+    const direction = this.isDesc ? 1 : -1;
+
+    this.model.sort((a, b) => {
+      if (a.title < b.title) {
+        return -1 * direction;
+      } else if (a.title > b.title) {
+        return 1 * direction;
+      } else {
+        return 0;
+      }
+    });
+  }
+
 }

@@ -73,12 +73,11 @@ import { FilterPipe } from './pipes/filter.pipe';
     MatDialogModule,
     NgxPaginationModule
   ],
-  providers: [{
-    provide: HTTP_INTERCEPTORS,
-    useClass: AuthInterceptor,
-    multi: true,
-  }, {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},
-  CookieService],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}, 
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},
+    CookieService
+  ],
   bootstrap: [AppComponent],
   entryComponents: [
     EditArticleComponent
